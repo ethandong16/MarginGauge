@@ -4,3 +4,4 @@ export * from "./faq";
 export * from "./feeSources";
 export * from "./methodology";
 export * from "./changelog";
+export * from "./guides";

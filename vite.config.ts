@@ -9,6 +9,8 @@ const pageInputs = {
   privacy: "privacy/index.html",
   terms: "terms/index.html",
   disclaimer: "disclaimer/index.html",
+  etsyFeesGuide: "guides/etsy-fees-for-us-sellers/index.html",
+  etsyProfitGuide: "guides/how-to-calculate-etsy-profit/index.html",
   notFound: "404.html",
 };
 

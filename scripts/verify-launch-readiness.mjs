@@ -28,7 +28,12 @@ if (!existsSync(ogPath)) {
   }
 }
 
-for (const file of ["index.html", "etsy-profit-calculator/index.html"]) {
+for (const file of [
+  "index.html",
+  "etsy-profit-calculator/index.html",
+  "guides/etsy-fees-for-us-sellers/index.html",
+  "guides/how-to-calculate-etsy-profit/index.html",
+]) {
   const html = read(join(dist, file));
   if (!html.includes('property="og:image" content="https://margin-gauge.com/og-image.png"')) {
     failures.push(`${file}: missing production og:image metadata`);

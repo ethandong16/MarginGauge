@@ -8,6 +8,7 @@ import {
   METHODOLOGY_SECTIONS,
   METHODOLOGY_VARIABLES,
   OFFICIAL_SOURCES,
+  PUBLISHED_GUIDES,
   WORKED_EXAMPLES,
 } from "../content";
 
@@ -187,6 +188,33 @@ export function ContentSections() {
                   ))}
                 </ul>
                 <p>{example.result}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="content-band guides-band" id="guides" aria-labelledby="guides-title">
+        <div className="content-inner">
+          <div className="section-heading">
+            <BookOpen size={22} aria-hidden="true" />
+            <div>
+              <p className="section-label">Seller guides</p>
+              <h2 id="guides-title">Understand the inputs behind the result</h2>
+            </div>
+          </div>
+          <p className="section-lead">
+            Use these guides to identify the right fee bases and cost inputs, then bring your own order numbers back to the calculator.
+          </p>
+          <div className="guide-link-grid">
+            {PUBLISHED_GUIDES.map((guide) => (
+              <article className="guide-link-item" key={guide.id}>
+                <p>{guide.eyebrow}</p>
+                <h3><a href={guide.url}>{guide.title}</a></h3>
+                <span>{guide.summary}</span>
+                <a className="guide-link-action" href={guide.url}>
+                  Read guide <ArrowUpRight size={15} aria-hidden="true" />
+                </a>
               </article>
             ))}
           </div>

@@ -10,6 +10,8 @@ const routes = new Map([
   ["/privacy/", ["privacy/index.html", "https://margin-gauge.com/privacy/"]],
   ["/terms/", ["terms/index.html", "https://margin-gauge.com/terms/"]],
   ["/disclaimer/", ["disclaimer/index.html", "https://margin-gauge.com/disclaimer/"]],
+  ["/guides/etsy-fees-for-us-sellers/", ["guides/etsy-fees-for-us-sellers/index.html", "https://margin-gauge.com/guides/etsy-fees-for-us-sellers/"]],
+  ["/guides/how-to-calculate-etsy-profit/", ["guides/how-to-calculate-etsy-profit/index.html", "https://margin-gauge.com/guides/how-to-calculate-etsy-profit/"]],
 ]);
 
 const failures = [];
@@ -51,10 +53,30 @@ for (const required of ["Current fee bases", "Frequently asked questions", "Offi
   if (!calculator.includes(required)) failures.push(`calculator static HTML: missing ${required}`);
 }
 
+for (const file of [
+  "guides/etsy-fees-for-us-sellers/index.html",
+  "guides/how-to-calculate-etsy-profit/index.html",
+]) {
+  const html = read(file);
+  if (!html.includes('property="og:type" content="article"')) failures.push(`${file}: missing article Open Graph type`);
+  if (!html.includes('name="author" content="MarginGauge Editorial"')) failures.push(`${file}: missing editorial author`);
+  if (!html.includes('"@type": "Article"')) failures.push(`${file}: missing Article structured data`);
+  if (!html.includes('"@type": "BreadcrumbList"')) failures.push(`${file}: missing breadcrumb structured data`);
+  if (!html.includes('href="/etsy-profit-calculator/"')) failures.push(`${file}: missing calculator link`);
+}
+
+const sitemap = read("sitemap.xml");
+for (const path of [
+  "/guides/etsy-fees-for-us-sellers/",
+  "/guides/how-to-calculate-etsy-profit/",
+]) {
+  if (!sitemap.includes(`https://margin-gauge.com${path}`)) failures.push(`sitemap: missing ${path}`);
+}
+
 const notFound = read("404.html");
 if (!notFound.includes('name="robots" content="noindex,nofollow"')) failures.push("404: missing noindex");
 
-for (const config of ["_headers", "_redirects", "robots.txt", "sitemap.xml", "favicon.svg", "site.webmanifest"]) read(config);
+for (const config of ["_headers", "_redirects", "robots.txt", "favicon.svg", "site.webmanifest"]) read(config);
 
 const allHtml = [...routes.values()].map(([file]) => read(file)).join("\n");
 const beaconMatches = [...allHtml.matchAll(/data-cf-beacon="([^"]+)"/g)];

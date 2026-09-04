@@ -4,6 +4,8 @@ Production source for [margin-gauge.com](https://margin-gauge.com/). The first t
 
 Chinese usage and operation guide: [USER_GUIDE.zh-CN.md](./USER_GUIDE.zh-CN.md)
 
+Four-week SEO publication tracker: [SEO_ROLLOUT.md](./SEO_ROLLOUT.md)
+
 ## Run locally
 
 ```powershell

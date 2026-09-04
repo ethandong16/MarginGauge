@@ -9,6 +9,8 @@ const pages = new Map([
   ["/privacy/", `${origin}/privacy/`],
   ["/terms/", `${origin}/terms/`],
   ["/disclaimer/", `${origin}/disclaimer/`],
+  ["/guides/etsy-fees-for-us-sellers/", `${origin}/guides/etsy-fees-for-us-sellers/`],
+  ["/guides/how-to-calculate-etsy-profit/", `${origin}/guides/how-to-calculate-etsy-profit/`],
 ]);
 
 for (const [path, canonical] of pages) {
@@ -26,15 +28,21 @@ for (const [path, canonical] of pages) {
   }
 }
 
-try {
-  const redirect = await fetch(`${origin}/etsy-profit-calculator`, { redirect: "manual" });
-  if (![301, 308].includes(redirect.status)) failures.push(`/etsy-profit-calculator: expected 301/308, received ${redirect.status}`);
-  const location = redirect.headers.get("location");
-  if (location !== "/etsy-profit-calculator/" && location !== `${origin}/etsy-profit-calculator/`) {
-    failures.push(`/etsy-profit-calculator: unexpected Location ${location}`);
+for (const path of [
+  "/etsy-profit-calculator",
+  "/guides/etsy-fees-for-us-sellers",
+  "/guides/how-to-calculate-etsy-profit",
+]) {
+  try {
+    const redirect = await fetch(`${origin}${path}`, { redirect: "manual" });
+    if (![301, 308].includes(redirect.status)) failures.push(`${path}: expected 301/308, received ${redirect.status}`);
+    const location = redirect.headers.get("location");
+    if (location !== `${path}/` && location !== `${origin}${path}/`) {
+      failures.push(`${path}: unexpected Location ${location}`);
+    }
+  } catch (error) {
+    failures.push(`${path} redirect: ${error.message}`);
   }
-} catch (error) {
-  failures.push(`/etsy-profit-calculator redirect: ${error.message}`);
 }
 
 try {

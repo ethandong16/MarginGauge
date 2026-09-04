@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#10482e" />
+    <title>How to Calculate Etsy Profit Per Order | MarginGauge</title>
+    <meta name="description" content="Calculate Etsy contribution profit per order from seller revenue, marketplace fees, COGS, fulfillment costs, and allocated ad spend." />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="author" content="MarginGauge Editorial" />
+    <link rel="canonical" href="https://margin-gauge.com/guides/how-to-calculate-etsy-profit/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="MarginGauge" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="How to Calculate Etsy Profit Per Order" />
+    <meta property="og:description" content="A practical order-level workflow for separating Etsy fees, operating costs, and contribution profit." />
+    <meta property="og:url" content="https://margin-gauge.com/guides/how-to-calculate-etsy-profit/" />
+    <meta property="og:image" content="https://margin-gauge.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="MarginGauge profit tools for online sellers" />
+    <meta property="article:published_time" content="2026-09-04" />
+    <meta property="article:modified_time" content="2026-09-04" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="How to Calculate Etsy Profit Per Order" />
+    <meta name="twitter:description" content="Build an Etsy order-level contribution model without confusing profit, proceeds, and payout." />
+    <meta name="twitter:image" content="https://margin-gauge.com/og-image.png" />
+    <link rel="stylesheet" href="/src/static-pages.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "@id": "https://margin-gauge.com/guides/how-to-calculate-etsy-profit/#article",
+            "headline": "How to Calculate Etsy Profit Per Order",
+            "description": "Calculate Etsy contribution profit per order from seller revenue, marketplace fees, COGS, fulfillment costs, and allocated ad spend.",
+            "datePublished": "2026-09-04",
+            "dateModified": "2026-09-04",
+            "inLanguage": "en-US",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://margin-gauge.com/guides/how-to-calculate-etsy-profit/"
+            },
+            "author": {
+              "@type": "Organization",
+              "name": "MarginGauge Editorial",
+              "url": "https://margin-gauge.com/about/#editorial-standards"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "@id": "https://margin-gauge.com/#organization",
+              "name": "MarginGauge",
+              "url": "https://margin-gauge.com/"
+            },
+            "image": "https://margin-gauge.com/og-image.png",
+            "about": ["Etsy profit", "Contribution margin", "Unit economics"]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://margin-gauge.com/guides/how-to-calculate-etsy-profit/#breadcrumbs",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "MarginGauge",
+                "item": "https://margin-gauge.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "How to Calculate Etsy Profit Per Order",
+                "item": "https://margin-gauge.com/guides/how-to-calculate-etsy-profit/"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body class="static-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/" aria-label="MarginGauge home"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>MarginGauge</a>
+        <nav aria-label="Primary navigation"><a href="/etsy-profit-calculator/">Etsy calculator</a><a href="/#etsy-guides">Guides</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
+      </div>
+    </header>
+
+    <main class="guide-main" id="main">
+      <nav class="guide-breadcrumbs" aria-label="Breadcrumb">
+        <ol><li><a href="/">Home</a></li><li aria-current="page">How to Calculate Etsy Profit Per Order</li></ol>
+      </nav>
+
+      <header class="guide-header">
+        <p class="static-kicker">Etsy profit workflow</p>
+        <h1>How to Calculate Etsy Profit Per Order</h1>
+        <p class="guide-dek">Start with what the seller earns, then subtract Etsy marketplace fees and the variable costs needed to make and fulfill that order. Keep sales tax, payout timing, and account balance changes in their own categories.</p>
+        <p class="guide-scope">US Etsy.com seller · US bank account · USD</p>
+        <div class="guide-meta">
+          <span>By <a href="/about/#editorial-standards">MarginGauge Editorial</a></span>
+          <span>Published September 4, 2026</span>
+          <span>Fee sources reviewed September 3, 2026</span>
+        </div>
+      </header>
+
+      <nav class="guide-toc" aria-label="In this guide">
+        <strong>In this guide</strong>
+        <ol>
+          <li><a href="#profit-definition">Define the profit question</a></li>
+          <li><a href="#inputs">Collect order inputs</a></li>
+          <li><a href="#worked-example">Work one order</a></li>
+          <li><a href="#metrics">Read margin and ROI</a></li>
+          <li><a href="#two-views">Choose the calculation view</a></li>
+          <li><a href="#sources">Official sources and limits</a></li>
+        </ol>
+      </nav>
+
+      <article class="guide-article">
+        <p class="guide-lead">The useful order-level question is not simply "What did the buyer pay?" It is "What contribution remains after the marketplace charges and variable costs caused by this order?" MarginGauge calls that amount <strong>contribution profit</strong>.</p>
+        <p>Contribution profit is not accounting net income, taxable income, an Etsy payout, or the amount currently available for deposit. It is a decision metric for comparing an order's seller revenue with its variable costs.</p>
+
+        <h2 id="profit-definition">1. Define the profit question before adding numbers</h2>
+        <p>Use Unit economics when you want to know whether an order contributes profit over the long run. In this view, each sold unit receives a $0.20 listing-cost allocation and every seller-entered variable operating cost is included, regardless of where it was paid.</p>
+        <div class="guide-equation">Contribution profit = seller gross order revenue - net Etsy marketplace fees - operating costs - allocated Etsy Ads spend</div>
+        <p>Use a Payment Account estimate only when the question is how the order may change Etsy's account ledger. That view uses order-triggered listing debits and includes operational costs only when they were billed through Etsy. It is still not a payout forecast.</p>
+
+        <h2 id="inputs">2. Collect the order inputs in separate buckets</h2>
+        <h3>Seller gross order revenue</h3>
+        <p>Begin with the listing price multiplied by quantity. Subtract the seller-funded item discount, then add the net amounts actually charged for personalization, shipping, and gift wrap. This total is seller gross order revenue, or R.</p>
+        <div class="guide-equation">R = merchandise - seller-funded item discount + personalization + shipping charged + gift wrap</div>
+        <p>An Etsy-funded coupon is kept separate because Etsy's official guidance says the seller receives the full order amount and pays ordinary seller fees as if that coupon were not used. Marketplace sales tax collected by Etsy is also separate: it is pass-through money, not seller revenue.</p>
+
+        <h3>Etsy marketplace fees</h3>
+        <p>For the supported US scenario, start with the listing allocation, the 6.5% transaction fee, and payment processing of 3% of processing gross plus $0.25 per order. Add an Offsite Ads fee or subtract a Share &amp; Save credit only when the order is eligible and attributed.</p>
+        <p>For a detailed map of rates and bases, see <a href="/guides/etsy-fees-for-us-sellers/">Etsy Fees for US Sellers</a>. Keeping that reference separate lets this guide focus on the profit workflow instead of repeating a fee directory.</p>
+
+        <h3>Variable operating costs</h3>
+        <ul>
+          <li>COGS for each sold unit.</li>
+          <li>The actual fulfillment label and shipping insurance.</li>
+          <li>Packaging used for the order.</li>
+          <li>Variable labor that changes with the order.</li>
+          <li>Other order-level variable costs.</li>
+          <li>Etsy Ads spend that the seller deliberately allocates to this order.</li>
+        </ul>
+        <p>Do not infer these costs from the order price. A free-shipping offer changes the amount charged to the buyer; it does not erase the label or packaging cost.</p>
+
+        <h2 id="worked-example">3. Work one order from revenue to profit</h2>
+        <p>Assume one item with a $20.00 listing price and $5.00 unit COGS. The buyer is charged no shipping, personalization, or gift wrap, and Etsy collected no sales tax. There is no attributed program or other variable cost.</p>
+        <figure class="example-figure">
+          <figcaption>Basic order contribution example</figcaption>
+          <dl class="example-steps">
+            <div><dt>Seller revenue</dt><dd>$20.00</dd></div>
+            <div><dt>Transaction</dt><dd>$1.30</dd></div>
+            <div><dt>Processing</dt><dd>$0.85</dd></div>
+            <div><dt>Listing allocation</dt><dd>$0.20</dd></div>
+            <div><dt>Unit COGS</dt><dd>$5.00</dd></div>
+            <div><dt>Contribution profit</dt><dd>$12.65</dd></div>
+          </dl>
+        </figure>
+        <div class="guide-equation">$20.00 - ($1.30 + $0.85 + $0.20) - $5.00 = $12.65</div>
+        <p>The result leaves $17.65 after Etsy marketplace fees and $12.65 after the unit COGS. If the seller later adds a $1.00 variable cost that truly belongs to this order, contribution profit falls by exactly $1.00; the Etsy fee lines do not change.</p>
+
+        <h2 id="metrics">4. Read contribution margin, ROI, and per-item profit</h2>
+        <div class="guide-table-wrap" role="region" aria-label="Profit metric definitions. Scroll horizontally to view all columns." tabindex="0">
+          <table class="guide-table">
+            <thead><tr><th scope="col">Metric</th><th scope="col">Definition</th><th scope="col">Example result</th><th scope="col">Use</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Contribution profit</th><td>R minus all net variable costs</td><td>$12.65</td><td>Dollar contribution from the modeled order</td></tr>
+              <tr><th scope="row">Contribution margin</th><td>Contribution profit / R</td><td>63.25%</td><td>Share of seller revenue that remains</td></tr>
+              <tr><th scope="row">Contribution ROI</th><td>Contribution profit / total net variable costs</td><td>172.11%</td><td>Contribution relative to the modeled variable-cost investment</td></tr>
+              <tr><th scope="row">Average profit per item</th><td>Contribution profit / total quantity</td><td>$12.65</td><td>Order average; not SKU-level profit in a mixed basket</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Margin and ROI answer different questions because their denominators differ. A negative result must remain negative rather than being clipped to zero. ROI is unavailable when total net variable costs are zero or negative.</p>
+
+        <h2 id="two-views">5. Keep Unit economics and Payment Account activity separate</h2>
+        <p>The same order can show different listing amounts in the two views. Unit economics consistently allocates $0.20 to each unit sold. A standard listing that sells out can trigger no new listing debit for the first sold unit, while a listing with remaining inventory can trigger a sold-renewal debit. Etsy's <a href="https://help.etsy.com/hc/en-us/articles/360000344908-Fees-and-Listing-Multiple-Quantities" target="_blank" rel="noreferrer">multiple-quantity guidance</a> documents standard patterns, but the actual statement wins for unusual listing states.</p>
+        <p>External COGS, labor, and packaging reduce Unit economics but do not appear in the Etsy account change. An Etsy-billed label can reduce both. Marketplace tax collected and remitted by Etsy is not treated as seller revenue in either view, although applicable tax increases the percentage processing base.</p>
+        <p class="guide-note"><strong>Stop when the order is outside scope.</strong> Refunds, cancellations, chargebacks, reserves, currency conversion, Pattern, Square, and historical-rate reconstruction are not silently approximated by the current calculator.</p>
+
+        <section class="guide-cta" aria-labelledby="calculate-heading">
+          <h2 id="calculate-heading">Calculate with your own order inputs</h2>
+          <p>Use Unit economics for the default contribution view, or open the advanced basis selector for an order-linked Payment Account estimate.</p>
+          <a href="/etsy-profit-calculator/">Open the Etsy Profit Calculator</a>
+        </section>
+
+        <h2 id="sources">Official sources and limits</h2>
+        <ul class="guide-source-list">
+          <li><a href="https://www.etsy.com/legal/fees/" target="_blank" rel="noreferrer">Etsy Fees &amp; Payments Policy</a> - listing, transaction, and applicable attributed-order fees; official page updated February 13, 2026.</li>
+          <li><a href="https://www.etsy.com/legal/etsy-payments/" target="_blank" rel="noreferrer">Etsy Payments Policy</a> - processing fee and Payment Account scope; official page updated July 31, 2026.</li>
+          <li><a href="https://help.etsy.com/hc/en-us/articles/115015628847-What-are-Payment-Processing-Fees-for-Selling-on-Etsy" target="_blank" rel="noreferrer">What are Payment Processing Fees for Selling on Etsy?</a> - US rate and treatment of applicable tax.</li>
+          <li><a href="https://help.etsy.com/hc/en-us/articles/360000344908-Fees-and-Listing-Multiple-Quantities" target="_blank" rel="noreferrer">Fees and Listing Multiple Quantities</a> - standard listing-debit examples.</li>
+          <li><a href="https://help.etsy.com/hc/en-us/articles/1500005142242-How-Etsy-Funded-Coupons-Work-For-Sellers" target="_blank" rel="noreferrer">How Etsy Funded Coupons Work For Sellers</a> - seller proceeds and ordinary fee treatment.</li>
+        </ul>
+        <p>MarginGauge reviewed these sources on September 3, 2026. Where Etsy does not publish a rule's business-effective date or complete intermediate rounding sequence, this guide labels the calculation as a current estimate or MarginGauge convention.</p>
+        <p>This guide does not define accounting income or provide tax or legal advice. MarginGauge is independent of Etsy, Inc. Corrections can be sent to <a href="mailto:yimingdong16@gmail.com">yimingdong16@gmail.com</a>.</p>
+      </article>
+
+      <aside class="guide-related" aria-labelledby="related-title">
+        <p class="static-kicker">Reference guide</p>
+        <h2 id="related-title">Check the fee rates and bases</h2>
+        <p>Use the fee guide when you need to confirm why two fee lines use different order amounts.</p>
+        <ul><li><a href="/guides/etsy-fees-for-us-sellers/">Etsy Fees for US Sellers: 2026 Rates and Examples</a></li></ul>
+      </aside>
+    </main>
+
+    <footer class="static-footer"><p>© 2026 MarginGauge. Independent of Etsy, Inc.</p><nav aria-label="Footer navigation"><a href="/etsy-profit-calculator/">Calculator</a><a href="/#etsy-guides">Guides</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/disclaimer/">Disclaimer</a></nav></footer>
+  </body>
+</html>

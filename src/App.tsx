@@ -873,6 +873,7 @@ export default function App() {
             <a href="#calculator" onClick={() => setMobileNavOpen(false)}>Calculator</a>
             <a href="#fee-guide" onClick={() => setMobileNavOpen(false)}>Fee guide</a>
             <a href="#methodology" onClick={() => setMobileNavOpen(false)}>Methodology</a>
+            <a href="#guides" onClick={() => setMobileNavOpen(false)}>Guides</a>
             <a href="#faq" onClick={() => setMobileNavOpen(false)}>FAQ</a>
             <a href="/about/" onClick={() => setMobileNavOpen(false)}>About</a>
           </nav>
@@ -1003,6 +1004,7 @@ export default function App() {
         </div>
         <nav aria-label="Footer navigation">
           <a href="#methodology">Methodology</a>
+          <a href="#guides">Guides</a>
           <a href="/privacy/">Privacy</a>
           <a href="/terms/">Terms</a>
           <a href="/disclaimer/">Disclaimer</a>
