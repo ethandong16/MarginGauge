@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fbfcfa" />
+    <meta name="color-scheme" content="light" />
+
+    <title>Etsy Profit Calculator for US Sellers | MarginKit</title>
+    <meta
+      name="description"
+      content="Estimate Etsy contribution profit with shipping, sales-tax processing, Offsite Ads, Share &amp; Save, and target-price scenarios for US sellers."
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+
+    <!-- DEPLOYMENT BLOCKER: replace marginkit.example everywhere before production launch. -->
+    <link rel="canonical" href="https://marginkit.example/etsy-profit-calculator/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="MarginKit" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Etsy Profit Calculator for US Sellers | MarginKit" />
+    <meta
+      property="og:description"
+      content="Estimate Etsy contribution profit, Etsy fees, and a minimum target price for a supported US seller scenario."
+    />
+    <meta property="og:url" content="https://marginkit.example/etsy-profit-calculator/" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Etsy Profit Calculator for US Sellers | MarginKit" />
+    <meta
+      name="twitter:description"
+      content="Estimate Etsy contribution profit with shipping, sales-tax processing, Offsite Ads, Share &amp; Save, and target pricing."
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://marginkit.example/#organization",
+            "name": "MarginKit",
+            "url": "https://marginkit.example/"
+          },
+          {
+            "@type": "WebApplication",
+            "@id": "https://marginkit.example/etsy-profit-calculator/#application",
+            "name": "MarginKit Etsy Profit Calculator for US Sellers",
+            "url": "https://marginkit.example/etsy-profit-calculator/",
+            "description": "Estimate Etsy contribution profit with shipping, sales-tax processing, Offsite Ads, Share & Save, and target-price scenarios for US sellers.",
+            "applicationCategory": "BusinessApplication",
+            "applicationSubCategory": "Seller fee and contribution profit calculator",
+            "operatingSystem": "Any",
+            "browserRequirements": "Requires JavaScript and a modern web browser",
+            "isAccessibleForFree": true,
+            "softwareVersion": "1.0.0",
+            "dateModified": "2026-09-03",
+            "inLanguage": "en-US",
+            "featureList": [
+              "US Etsy fee estimate",
+              "Unit economics and Payment Account estimate views",
+              "Offsite Ads and Share & Save scenarios",
+              "Contribution profit and margin metrics",
+              "Minimum whole-cent target price search"
+            ],
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "publisher": {
+              "@id": "https://marginkit.example/#organization"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://marginkit.example/etsy-profit-calculator/#breadcrumbs",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "MarginKit",
+                "item": "https://marginkit.example/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Etsy Profit Calculator for US Sellers",
+                "item": "https://marginkit.example/etsy-profit-calculator/"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://marginkit.example/etsy-profit-calculator/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What are the standard Etsy fees for a US seller?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "For the supported US Etsy Payments scenario, the calculator applies a $0.20 listing allocation per item sold, a 6.5% transaction fee, and payment processing of 3% of the processing gross plus $0.25 per order. Offsite Ads, Share & Save, Texas seller-fee tax, shipping labels, and other costs can change the result."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Etsy charge seller fees on sales tax in the US?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Etsy's US transaction-fee base excludes sales tax. The Etsy Payments processing percentage applies to the gross order amount, including applicable sales tax. MarginKit treats marketplace sales tax as pass-through money, not seller revenue."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How does shipping affect Etsy profit?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Shipping charged to the buyer is seller order revenue and is included in the transaction-fee base and payment-processing gross. The actual label, insurance, packaging, and fulfillment amounts are separate costs, so free shipping does not mean shipping costs are zero."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How are Etsy Offsite Ads fees estimated?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "For an attributed order, MarginKit applies the seller-selected 12% or 15% rate to eligible seller order revenue and caps the fee at $100 per order. Sellers must confirm their rate eligibility; MarginKit does not infer it from one order."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How does Share & Save affect the estimate?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Share & Save is shown as an Etsy fee credit. The standard 4% estimate uses seller revenue minus an Etsy-funded promotional discount. Offsite Ads and Share & Save cannot both be selected. A 6.5% introductory estimate is available only when the seller confirms the invitation and 14-day deadline, and v1 does not combine that introductory rate with an Etsy-funded coupon because the public sources do not confirm the credit base."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does the Target Price result mean?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "It is the lowest pre-discount unit price, in whole cents and within the selected assumptions, that meets the requested contribution-profit or contribution-margin target. The search cap is a MarginKit technical limit, not an Etsy listing limit."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why can the Payment Account estimate differ from unit economics?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Unit economics allocates one $0.20 listing cost per item sold. The Payment Account view estimates actual listing debits triggered by the order and includes only operational costs billed through the Etsy account. Timing, credits, reserves, refunds, and unsupported adjustments can still make Etsy's statement differ."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Will this exactly match my Etsy statement or payout?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. MarginKit uses line-level half-up cent rounding as a documented product convention because Etsy does not publish every intermediate rounding step. It estimates contribution profit or an order-related Payment Account change, not payout timing, available funds, taxes owed, or accounting income."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+
+    <style>
+      .static-fallback { max-width: 72rem; margin: 0 auto; padding: 2rem; font: 16px/1.6 system-ui, sans-serif; color: #18221d; }
+      .static-fallback a { color: #216a49; }
+      .static-fallback table { width: 100%; border-collapse: collapse; }
+      .static-fallback th, .static-fallback td { padding: .65rem; border: 1px solid #ccd5cf; text-align: left; vertical-align: top; }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <main class="static-fallback">
+        <h1>Etsy Profit Calculator for US Sellers</h1>
+        <p>Estimate contribution profit, Etsy marketplace fees, and a target price for a US bank account and USD order. Rates verified September 3, 2026.</p>
+        <p><strong>JavaScript is required to use the calculator.</strong> The verified method and fee summary remain available below.</p>
+
+        <h2>Current fee bases</h2>
+        <table>
+          <thead><tr><th>Fee</th><th>Supported US calculation</th></tr></thead>
+          <tbody>
+            <tr><td>Listing allocation</td><td>$0.20 per item sold in Unit economics</td></tr>
+            <tr><td>Transaction</td><td>6.5% of seller gross order revenue, excluding US sales tax</td></tr>
+            <tr><td>Payment processing</td><td>3% of processing gross, including applicable sales tax, plus $0.25 per order</td></tr>
+            <tr><td>Offsite Ads</td><td>Selected 12% or 15% attributed-order rate, capped at $100 per order</td></tr>
+            <tr><td>Share &amp; Save</td><td>Standard 4% credit uses the eligible order total after an Etsy-funded discount; the confirmed 6.5% introductory rate is not combined with an Etsy-funded coupon in v1</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Method</h2>
+        <p>Unit economics subtracts net Etsy marketplace fees, seller-entered operating costs, and allocated Etsy Ads spend from seller gross order revenue. Marketplace sales tax is pass-through money but can increase the payment-processing fee.</p>
+        <p>MarginKit rounds each fee line half up to the nearest cent as a documented estimate. It does not claim to reproduce every Etsy statement rounding step.</p>
+
+        <h2>Frequently asked questions</h2>
+        <h3>What are the standard Etsy fees for a US seller?</h3>
+        <p>For the supported US Etsy Payments scenario, the calculator applies a $0.20 listing allocation per item sold, a 6.5% transaction fee, and payment processing of 3% of the processing gross plus $0.25 per order. Offsite Ads, Share &amp; Save, Texas seller-fee tax, shipping labels, and other costs can change the result.</p>
+        <h3>Does Etsy charge seller fees on sales tax in the US?</h3>
+        <p>Etsy's US transaction-fee base excludes sales tax. The Etsy Payments processing percentage applies to the gross order amount, including applicable sales tax. MarginKit treats marketplace sales tax as pass-through money, not seller revenue.</p>
+        <h3>How does shipping affect Etsy profit?</h3>
+        <p>Shipping charged to the buyer is seller order revenue and is included in the transaction-fee base and payment-processing gross. The actual label, insurance, packaging, and fulfillment amounts are separate costs, so free shipping does not mean shipping costs are zero.</p>
+        <h3>How are Etsy Offsite Ads fees estimated?</h3>
+        <p>For an attributed order, MarginKit applies the seller-selected 12% or 15% rate to eligible seller order revenue and caps the fee at $100 per order. Sellers must confirm their rate eligibility; MarginKit does not infer it from one order.</p>
+        <h3>How does Share &amp; Save affect the estimate?</h3>
+        <p>Share &amp; Save is shown as an Etsy fee credit. The standard 4% estimate uses seller revenue minus an Etsy-funded promotional discount. Offsite Ads and Share &amp; Save cannot both be selected. A 6.5% introductory estimate is available only when the seller confirms the invitation and 14-day deadline, and v1 does not combine that introductory rate with an Etsy-funded coupon because the public sources do not confirm the credit base.</p>
+        <h3>What does the Target Price result mean?</h3>
+        <p>It is the lowest pre-discount unit price, in whole cents and within the selected assumptions, that meets the requested contribution-profit or contribution-margin target. The search cap is a MarginKit technical limit, not an Etsy listing limit.</p>
+        <h3>Why can the Payment Account estimate differ from unit economics?</h3>
+        <p>Unit economics allocates one $0.20 listing cost per item sold. The Payment Account view estimates actual listing debits triggered by the order and includes only operational costs billed through the Etsy account. Timing, credits, reserves, refunds, and unsupported adjustments can still make Etsy's statement differ.</p>
+        <h3>Will this exactly match my Etsy statement or payout?</h3>
+        <p>No. MarginKit uses line-level half-up cent rounding as a documented product convention because Etsy does not publish every intermediate rounding step. It estimates contribution profit or an order-related Payment Account change, not payout timing, available funds, taxes owed, or accounting income.</p>
+
+        <h2>Official sources</h2>
+        <p>
+          <a href="https://www.etsy.com/legal/fees/">Etsy Fees &amp; Payments Policy</a> ·
+          <a href="https://help.etsy.com/hc/en-us/articles/115015628847-What-are-Payment-Processing-Fees-for-Selling-on-Etsy">Etsy Payments processing rates</a> ·
+          <a href="https://help.etsy.com/hc/en-us/articles/360000338367-How-Etsy-s-Offsite-Ads-Work">Etsy Offsite Ads</a> ·
+          <a href="https://help.etsy.com/hc/en-us/articles/16981332744087-How-to-Save-on-Etsy-Fees-with-the-Share-Save-Program">Etsy Share &amp; Save</a> ·
+          <a href="https://help.etsy.com/hc/en-us/articles/1500005142242-How-Etsy-Funded-Coupons-Work-For-Sellers">Etsy-funded coupons</a>
+        </p>
+        <p>Estimate only. MarginKit is independent of Etsy and does not provide accounting, tax, or legal advice.</p>
+      </main>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,3 @@
+# NON-LIVE PLACEHOLDER: AdSense is not enabled and no publisher is authorized here.
+# Do not add a sample or invented publisher ID.
+# Before enabling ads, replace this file with the production operator's verified ads.txt record.
