@@ -6,8 +6,8 @@ This tracker implements the first four-week editorial release without creating u
 
 | Guide | Target date | Status |
 |---|---:|---|
-| Etsy Fees for US Sellers: 2026 Rates and Examples | 2026-09-04 | Published in source |
-| How to Calculate Etsy Profit Per Order | 2026-09-04 | Published in source |
+| Etsy Fees for US Sellers: 2026 Rates and Examples | 2026-09-04 | Published and live |
+| How to Calculate Etsy Profit Per Order | 2026-09-04 | Published and live |
 | How to Price Etsy Products for Profit | 2026-09-08 | Planned |
 | Does Etsy Charge Fees on Shipping? A Profit Example | 2026-09-10 | Planned |
 | Etsy Offsite Ads Fees: 12%, 15%, and the $100 Cap | 2026-09-15 | Planned |
@@ -25,10 +25,14 @@ This tracker implements the first four-week editorial release without creating u
 
 ## Search Console operations
 
-Google Search Console ownership and sitemap submission are external account actions and are not represented by a placeholder verification token in this repository.
+Google Search Console was initialized on 2026-09-04. The `margin-gauge.com` Domain property is verified through a Cloudflare DNS TXT record. The verification value is intentionally not stored in this repository.
 
-- Verify a `margin-gauge.com` Domain property through the authorized Google and Cloudflare accounts.
-- Submit `https://margin-gauge.com/sitemap.xml` and inspect each newly published URL once.
+- `https://margin-gauge.com/sitemap.xml` was submitted successfully and reported five discovered pages on 2026-09-04.
+- Indexing was requested once for the home page, Etsy calculator, Etsy fee guide, and Etsy profit guide on 2026-09-04.
+- Live inspection reported both published guides as available to Google. Manual Actions and Security Issues reported no issues.
+
+- Keep the DNS verification record in place.
+- Inspect each newly published URL once after its sitemap update is live.
 - At day 7, diagnose any URL still unknown to Google. At day 14, review intent, originality, canonical, rendering, and internal links for any discovered or crawled URL that remains unindexed.
 - Weekly, record US Web impressions, clicks, CTR, and average position by page, query, and device; separate branded and non-branded queries.
 - Treat robots blocks, wrong canonicals, soft 404s, 5xx responses, sitemap errors, manual actions, and security issues as immediate failures.
