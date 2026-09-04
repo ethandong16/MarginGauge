@@ -461,7 +461,7 @@ export function calculateTargetPrice(
         error: {
           code: "NO_VALID_PRICE_WITHIN_CAP",
           message:
-            "No price at or below $1,000,000 meets this target. The cap is a MarginKit limit, not an Etsy limit.",
+            "No price at or below $1,000,000 meets this target. The cap is a MarginGauge limit, not an Etsy limit.",
           details: { maxUnitPriceCents },
         },
       };

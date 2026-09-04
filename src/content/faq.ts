@@ -13,7 +13,7 @@ export const FAQ_ITEMS: readonly FaqItem[] = [
     id: "sales-tax",
     question: "Does Etsy charge seller fees on sales tax in the US?",
     answer:
-      "Etsy's US transaction-fee base excludes sales tax. The Etsy Payments processing percentage applies to the gross order amount, including applicable sales tax. MarginKit treats marketplace sales tax as pass-through money, not seller revenue.",
+      "Etsy's US transaction-fee base excludes sales tax. The Etsy Payments processing percentage applies to the gross order amount, including applicable sales tax. MarginGauge treats marketplace sales tax as pass-through money, not seller revenue.",
     sourceIds: ["fees-policy", "payment-processing-rates", "us-sales-tax"],
   },
   {
@@ -27,7 +27,7 @@ export const FAQ_ITEMS: readonly FaqItem[] = [
     id: "offsite-ads",
     question: "How are Etsy Offsite Ads fees estimated?",
     answer:
-      "For an attributed order, MarginKit applies the seller-selected 12% or 15% rate to eligible seller order revenue and caps the fee at $100 per order. Sellers must confirm their rate eligibility; MarginKit does not infer it from one order.",
+      "For an attributed order, MarginGauge applies the seller-selected 12% or 15% rate to eligible seller order revenue and caps the fee at $100 per order. Sellers must confirm their rate eligibility; MarginGauge does not infer it from one order.",
     sourceIds: ["offsite-ads-help", "advertising-policy"],
   },
   {
@@ -41,7 +41,7 @@ export const FAQ_ITEMS: readonly FaqItem[] = [
     id: "target-price",
     question: "What does the Target Price result mean?",
     answer:
-      "It is the lowest pre-discount unit price, in whole cents and within the selected assumptions, that meets the requested contribution-profit or contribution-margin target. The search cap is a MarginKit technical limit, not an Etsy listing limit.",
+      "It is the lowest pre-discount unit price, in whole cents and within the selected assumptions, that meets the requested contribution-profit or contribution-margin target. The search cap is a MarginGauge technical limit, not an Etsy listing limit.",
     sourceIds: [],
   },
   {
@@ -55,7 +55,7 @@ export const FAQ_ITEMS: readonly FaqItem[] = [
     id: "exactness",
     question: "Will this exactly match my Etsy statement or payout?",
     answer:
-      "No. MarginKit uses line-level half-up cent rounding as a documented product convention because Etsy does not publish every intermediate rounding step. It estimates contribution profit or an order-related Payment Account change, not payout timing, available funds, taxes owed, or accounting income.",
+      "No. MarginGauge uses line-level half-up cent rounding as a documented product convention because Etsy does not publish every intermediate rounding step. It estimates contribution profit or an order-related Payment Account change, not payout timing, available funds, taxes owed, or accounting income.",
     sourceIds: [],
   },
 ] as const;

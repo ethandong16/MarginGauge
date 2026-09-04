@@ -1,4 +1,4 @@
-# MarginKit Etsy Calculator 操作说明
+# MarginGauge Etsy Calculator 操作说明
 
 版本：v1.0  
 适用费率目录：`etsy-us-2026-09-03.1`  
@@ -6,7 +6,7 @@
 
 ## 1. 这个工具计算什么
 
-MarginKit 提供三种计算方式：
+MarginGauge 提供三种计算方式：
 
 1. **Order profit + Unit economics**：默认模式，用于判断一笔订单在扣除 Etsy 费用和卖家填写的变动成本后是否赚钱。
 2. **Order profit + Payment Account**：估算与订单相关的 Etsy Payment Account 净变动。它不是 payout、deposit、available balance 或会计利润。
@@ -27,7 +27,7 @@ MarginKit 提供三种计算方式：
 在 PowerShell 中执行：
 
 ```powershell
-cd "C:\Users\yimin\OneDrive\Desktop\MarginKit"
+cd "C:\Users\yimin\OneDrive\Desktop\MarginGauge"
 npm install
 npm run dev -- --host 127.0.0.1 --port 5174
 ```
@@ -131,7 +131,7 @@ Offsite Ads 与 Share & Save 不能同时选择。**Allocated Etsy Ads spend** �
 2. 填写 receipt 上的 **Colorado retail delivery fee**。
 3. 必须填写 receipt 或 Payment Account 中的 **Actual processing gross**。
 
-MarginKit 不会推断 Colorado delivery fee 是否进入 processing base；缺少实际 processing gross 时会停止计算。
+MarginGauge 不会推断 Colorado delivery fee 是否进入 processing base；缺少实际 processing gross 时会停止计算。
 
 ### 如何理解结果
 
@@ -162,7 +162,7 @@ MarginKit 不会推断 Colorado delivery fee 是否进入 processing base；缺�
 3. 填写 attribution、shop state、成本、Etsy Ads 及 manual adjustments。
 4. 点击 **Find minimum price**。
 
-输出的 **Minimum unit listing price** 是折扣前、按单件显示的最低整美分 listing 价格。系统会在 `$0.01–$1,000,000.00/unit` 范围搜索；这个上限只是 MarginKit 技术护栏，不是 Etsy 的 listing 限制。
+输出的 **Minimum unit listing price** 是折扣前、按单件显示的最低整美分 listing 价格。系统会在 `$0.01–$1,000,000.00/unit` 范围搜索；这个上限只是 MarginGauge 技术护栏，不是 Etsy 的 listing 限制。
 
 Target Price 不支持 Etsy-funded coupon、mixed basket、Payment Account 口径、Colorado delivery fee、processing gross override、退款或价格联动成本。无有效价格时不会返回近似结果。
 

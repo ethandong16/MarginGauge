@@ -1,4 +1,4 @@
-import { ArrowUpRight, BookOpen, ExternalLink, FileClock, LockKeyhole } from "lucide-react";
+import { ArrowUpRight, BookOpen, ExternalLink, FileClock } from "lucide-react";
 import {
   CHANGELOG_ENTRIES,
   FAQ_ITEMS,
@@ -8,13 +8,10 @@ import {
   METHODOLOGY_SECTIONS,
   METHODOLOGY_VARIABLES,
   OFFICIAL_SOURCES,
-  PRIVACY_CONTENT,
   WORKED_EXAMPLES,
 } from "../content";
-import type { PrivacySection } from "../content";
 
 const sourceById = new Map(OFFICIAL_SOURCES.map((source) => [source.id, source]));
-const privacySections: readonly PrivacySection[] = PRIVACY_CONTENT.sections;
 
 function SourceLinks({ ids, compact = false }: { ids: readonly string[]; compact?: boolean }) {
   return (
@@ -209,40 +206,6 @@ export function ContentSections() {
                   {item.sourceIds.length > 0 && <SourceLinks ids={item.sourceIds} compact />}
                 </div>
               </details>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="content-band privacy-band" id="privacy" aria-labelledby="privacy-title">
-        <div className="content-inner narrow-inner">
-          <div className="section-heading">
-            <LockKeyhole size={22} aria-hidden="true" />
-            <div>
-              <p className="section-label">Privacy</p>
-              <h2 id="privacy-title">{PRIVACY_CONTENT.title}</h2>
-            </div>
-          </div>
-          <p className="section-lead">{PRIVACY_CONTENT.summary}</p>
-          <p className="privacy-meta">
-            Effective {PRIVACY_CONTENT.effectiveDate} · Last updated {PRIVACY_CONTENT.lastUpdated}
-          </p>
-          <p className="operator-notice">{PRIVACY_CONTENT.operatorNotice}</p>
-          <div className="privacy-sections">
-            {privacySections.map((section) => (
-              <article key={section.id}>
-                <h3>{section.title}</h3>
-                {section.paragraphs.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
-                {section.bullets && (
-                  <ul>
-                    {section.bullets.map((bullet: string) => (
-                      <li key={bullet}>{bullet}</li>
-                    ))}
-                  </ul>
-                )}
-              </article>
             ))}
           </div>
         </div>

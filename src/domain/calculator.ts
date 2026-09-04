@@ -750,7 +750,7 @@ export function calculateOrder(
         projections: ["unit_economics"],
         amountCents: unitListingFeeCents,
         fixedAmountCents: unitListingRule.formula.amountCents,
-        note: "$0.20 per sold unit is a MarginKit unit-economics allocation.",
+        note: "$0.20 per sold unit is a MarginGauge unit-economics allocation.",
       }),
     ];
 
@@ -970,7 +970,7 @@ export function calculateOrder(
     ];
     if (input.context.sellerState === "TX") {
       assumptions.push(
-        "Texas seller-fee tax is calculated from the rounded transaction fee, then rounded once; this order of operations is a MarginKit convention.",
+        "Texas seller-fee tax is calculated from the rounded transaction fee, then rounded once; this order of operations is a MarginGauge convention.",
       );
     }
     if (input.paymentProcessingGrossOverrideCents !== undefined) {
@@ -978,12 +978,12 @@ export function calculateOrder(
     }
     if (input.discount.kind === "fixed") {
       assumptions.push(
-        "The fixed seller-funded discount is the seller-entered receipt amount and may reduce merchandise plus personalization under the frozen v1 convention; MarginKit does not infer promotional allocation.",
+        "The fixed seller-funded discount is the seller-entered receipt amount and may reduce merchandise plus personalization under the frozen v1 convention; MarginGauge does not infer promotional allocation.",
       );
     }
     if (input.attribution === "share_save_intro_6_5") {
       assumptions.push(
-        "The 6.5% Share & Save introductory credit relies on the seller's confirmation that this order is eligible and falls within the entered 14-day deadline; MarginKit cannot verify seller-specific eligibility.",
+        "The 6.5% Share & Save introductory credit relies on the seller's confirmation that this order is eligible and falls within the entered 14-day deadline; MarginGauge cannot verify seller-specific eligibility.",
       );
     }
     if (

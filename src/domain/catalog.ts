@@ -409,7 +409,7 @@ export const CURRENT_RATE_CATALOG: RateCatalogRelease = deepFreeze({
   catalogVerifiedAt: VERIFIED_AT,
   ruleRevisionIds: rules.map((rule) => rule.revisionId),
   changeSummary: "Initial frozen Etsy US/USD calculator catalog.",
-  reviewer: "MarginKit research review",
+  reviewer: "MarginGauge research review",
   sources,
   rules,
 });

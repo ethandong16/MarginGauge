@@ -1,10 +1,10 @@
-export const PLACEHOLDER_ORIGIN = "https://marginkit.example";
+export const SITE_ORIGIN = "https://margin-gauge.com";
 export const CALCULATOR_PATH = "/etsy-profit-calculator/";
-export const CANONICAL_URL = `${PLACEHOLDER_ORIGIN}${CALCULATOR_PATH}`;
+export const CANONICAL_URL = `${SITE_ORIGIN}${CALCULATOR_PATH}`;
 
 export const SITE_METADATA = {
-  name: "MarginKit",
-  pageTitle: "Etsy Profit Calculator for US Sellers | MarginKit",
+  name: "MarginGauge",
+  pageTitle: "Etsy Profit Calculator for US Sellers | MarginGauge",
   heading: "Etsy Profit Calculator for US Sellers",
   description:
     "Estimate Etsy contribution profit with shipping, sales-tax processing, Offsite Ads, Share & Save, and target-price scenarios for US sellers.",
@@ -17,8 +17,5 @@ export const SITE_METADATA = {
   ratesVerifiedLabel: "Rates verified Sep 3, 2026",
   scopeLabel: "US bank account and USD only",
   disclaimer:
-    "Estimate only. MarginKit is independent of Etsy and does not provide accounting, tax, or legal advice.",
+    "Estimate only. MarginGauge is independent of Etsy and does not provide accounting, tax, or legal advice.",
 } as const;
-
-export const PLACEHOLDER_DOMAIN_NOTICE =
-  "Deployment requirement: replace every marginkit.example URL in index.html, robots.txt, sitemap.xml, and this module with the production origin before launch.";

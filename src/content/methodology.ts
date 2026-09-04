@@ -1,9 +1,9 @@
 import type { ContentSection } from "./types";
 
 export const METHODOLOGY_INTRO = {
-  title: "How MarginKit estimates Etsy contribution profit",
+  title: "How MarginGauge estimates Etsy contribution profit",
   summary:
-    "MarginKit applies verified US Etsy fee rules to seller-entered order amounts. It keeps seller revenue, pass-through sales tax, marketplace fees, operating costs, and Payment Account activity separate.",
+    "MarginGauge applies verified US Etsy fee rules to seller-entered order amounts. It keeps seller revenue, pass-through sales tax, marketplace fees, operating costs, and Payment Account activity separate.",
   estimateNotice:
     "Results are estimates. Etsy does not publish every intermediate rounding step, and unsupported account events can make a statement differ.",
 } as const;
@@ -45,13 +45,13 @@ export const METHODOLOGY_SECTIONS: readonly ContentSection[] = [
     id: "discounts-and-tax",
     title: "Discounts, coupons, and tax stay separate",
     paragraphs: [
-      "A seller-funded discount reduces supported seller revenue. A fixed discount is the seller-entered receipt amount and may reduce merchandise plus personalization under the frozen v1 convention; MarginKit does not infer the promotion allocation. A percentage discount applies only to the merchandise subtotal, once per order. Buyer-paid shipping reflects the actual net shipping charge after any shipping promotion.",
+      "A seller-funded discount reduces supported seller revenue. A fixed discount is the seller-entered receipt amount and may reduce merchandise plus personalization under the frozen v1 convention; MarginGauge does not infer the promotion allocation. A percentage discount applies only to the merchandise subtotal, once per order. Buyer-paid shipping reflects the actual net shipping charge after any shipping promotion.",
       "An Etsy-funded coupon does not reduce seller revenue or the ordinary fee bases in this model. Marketplace sales tax is not seller revenue, but applicable tax enters the Etsy Payments percentage base.",
     ],
     bullets: [
       "Seller-funded and Etsy-funded discounts cannot be combined in v1 because their stacked treatment has not been verified.",
       "The 6.5% Share & Save introductory credit cannot be combined with an Etsy-funded coupon because the public sources do not confirm that credit base.",
-      "MarginKit does not infer a tax rate from an address or order amount.",
+      "MarginGauge does not infer a tax rate from an address or order amount.",
       "Texas tax on a seller fee is separate from buyer marketplace sales tax.",
     ],
     sourceIds: ["fees-policy", "etsy-funded-coupons", "payment-processing-rates", "us-sales-tax", "texas-seller-fee-tax"],
@@ -69,10 +69,10 @@ export const METHODOLOGY_SECTIONS: readonly ContentSection[] = [
     title: "How Target Price finds the minimum",
     paragraphs: [
       "Target Price searches whole-cent, pre-discount unit prices from $0.01 through $1,000,000.00. The seller chooses either no sales tax or a custom effective tax-rate scenario and one profit or margin target.",
-      "Because separately rounded fees can make neighboring prices non-monotonic, MarginKit uses an exact, left-first bounded search rather than assuming every higher cent improves profit. The result is the first supported cent that satisfies the target under the entered assumptions.",
+      "Because separately rounded fees can make neighboring prices non-monotonic, MarginGauge uses an exact, left-first bounded search rather than assuming every higher cent improves profit. The result is the first supported cent that satisfies the target under the entered assumptions.",
     ],
     bullets: [
-      "The search ceiling is a MarginKit technical guardrail, not an Etsy listing-price limit.",
+      "The search ceiling is a MarginGauge technical guardrail, not an Etsy listing-price limit.",
       "Target Price supports one listing with quantity and does not support Etsy-funded coupons, stacked discounts, Colorado delivery-fee assumptions, or a custom processing-base override.",
     ],
   },
@@ -80,8 +80,8 @@ export const METHODOLOGY_SECTIONS: readonly ContentSection[] = [
     id: "rounding",
     title: "Rounding convention",
     paragraphs: [
-      "Inputs are whole cents. MarginKit rounds the order-level percentage discount, tax scenario, and each fee or credit line independently to the nearest cent using half-up rounding, then totals the rounded lines.",
-      "This is a documented MarginKit convention, not a claim about Etsy's complete internal penny-rounding sequence. A statement can differ by one cent or more when unsupported activity or different intermediate rounding applies.",
+      "Inputs are whole cents. MarginGauge rounds the order-level percentage discount, tax scenario, and each fee or credit line independently to the nearest cent using half-up rounding, then totals the rounded lines.",
+      "This is a documented MarginGauge convention, not a claim about Etsy's complete internal penny-rounding sequence. A statement can differ by one cent or more when unsupported activity or different intermediate rounding applies.",
     ],
   },
   {

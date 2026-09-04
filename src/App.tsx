@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   ArrowUpRight,
   ChevronDown,
@@ -739,7 +739,7 @@ function targetResultView(result: TargetPriceCalculation, input: CostTraceInput)
     contractVersion: calculation.calculationContractVersion,
     notices: [
       ...calculation.assumptions,
-      "The $1,000,000 search ceiling is a MarginKit guardrail, not an Etsy listing-price limit.",
+      "The $1,000,000 search ceiling is a MarginGauge guardrail, not an Etsy listing-price limit.",
     ],
   };
 }
@@ -763,15 +763,20 @@ export default function App() {
   const [targetDirty, setTargetDirty] = useState(false);
   const [calculating, setCalculating] = useState(false);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const [pendingFocusId, setPendingFocusId] = useState<string | null>(null);
 
   const activeResult = mode === "order" ? orderResult : targetResult;
   const activeDirty = mode === "order" ? orderDirty : targetDirty;
   const catalogRuleCount = useMemo(() => CURRENT_RATE_CATALOG.ruleRevisionIds.length, []);
 
+  useEffect(() => {
+    if (!pendingFocusId) return;
+    document.getElementById(pendingFocusId)?.focus();
+    setPendingFocusId(null);
+  }, [pendingFocusId]);
+
   const focusAfterCalculation = (success: boolean) => {
-    window.setTimeout(() => {
-      document.getElementById(success ? "calculator-result-heading" : "calculator-errors")?.focus();
-    }, 0);
+    setPendingFocusId(success ? "calculator-result-heading" : "calculator-errors");
   };
 
   const calculateOrderDraft = () => {
@@ -841,13 +846,13 @@ export default function App() {
             }
           }}
         >
-          <a className="brand" href="#top" aria-label="MarginKit home">
+          <a className="brand" href="/" aria-label="MarginGauge home">
             <span className="brand-mark" aria-hidden="true">
               <span />
               <span />
               <span />
             </span>
-            MarginKit
+            MarginGauge
           </a>
           <button
             id="mobile-menu-button"
@@ -869,6 +874,7 @@ export default function App() {
             <a href="#fee-guide" onClick={() => setMobileNavOpen(false)}>Fee guide</a>
             <a href="#methodology" onClick={() => setMobileNavOpen(false)}>Methodology</a>
             <a href="#faq" onClick={() => setMobileNavOpen(false)}>FAQ</a>
+            <a href="/about/" onClick={() => setMobileNavOpen(false)}>About</a>
           </nav>
         </div>
       </header>
@@ -992,18 +998,20 @@ export default function App() {
 
       <footer className="site-footer">
         <div>
-          <a className="brand footer-brand" href="#top">MarginKit</a>
+          <a className="brand footer-brand" href="/">MarginGauge</a>
           <p>Independent margin tools for marketplace sellers.</p>
         </div>
         <nav aria-label="Footer navigation">
           <a href="#methodology">Methodology</a>
-          <a href="#privacy">Privacy &amp; cookies</a>
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/disclaimer/">Disclaimer</a>
           <a href="#changelog">Changelog</a>
           <a href="https://www.etsy.com/legal/fees/" target="_blank" rel="noreferrer">
             Etsy fee policy <ArrowUpRight size={14} aria-hidden="true" />
           </a>
         </nav>
-        <p className="copyright">© 2026 MarginKit. Not affiliated with Etsy, Inc.</p>
+        <p className="copyright">© 2026 MarginGauge. Not affiliated with Etsy, Inc.</p>
       </footer>
     </div>
   );

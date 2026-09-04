@@ -149,7 +149,7 @@ export const OFFICIAL_SOURCES: readonly OfficialSource[] = [
     effectiveAt: "2025-10-01",
     supports: ["6.25% tax applied to 80% of the Etsy transaction fee", "Texas seller scope"],
     evidenceStatus: "confirmed",
-    note: "MarginKit's use of the rounded transaction fee as the input is a disclosed product convention.",
+    note: "MarginGauge's use of the rounded transaction fee as the input is a disclosed product convention.",
   },
   {
     id: "us-sales-tax",
@@ -261,7 +261,7 @@ export const FEE_GUIDE_ITEMS: readonly FeeGuideItem[] = [
     direction: "debit",
     calculation: "6.25% x 80% x transaction fee",
     applicability: "Texas shops, effective October 1, 2025, under the verified source.",
-    calculatorTreatment: "Uses the already-rounded transaction fee, then rounds the tax line to cents as a MarginKit convention.",
+    calculatorTreatment: "Uses the already-rounded transaction fee, then rounds the tax line to cents as a MarginGauge convention.",
     sourceIds: ["texas-seller-fee-tax"],
     caveat: "Etsy does not publish the complete intermediate penny-rounding sequence.",
   },

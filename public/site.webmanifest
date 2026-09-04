@@ -1,0 +1,16 @@
+{
+  "name": "MarginGauge",
+  "short_name": "MarginGauge",
+  "description": "Practical unit economics tools for online sellers.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f3f6f3",
+  "theme_color": "#10482e",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

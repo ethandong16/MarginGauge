@@ -116,7 +116,7 @@ function AttributionFields({ draft, errors, update }: AttributionFieldsProps) {
             )}
             {!errors.shareIntroEnds && (
               <span className="field-hint" id="share-intro-ends-hint">
-                Enter the deadline shown in Etsy. MarginKit relies on your eligibility confirmation.
+                Enter the deadline shown in Etsy. MarginGauge relies on your eligibility confirmation.
               </span>
             )}
           </div>

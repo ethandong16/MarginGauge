@@ -1,0 +1,24 @@
+.static-fallback {
+  max-width: 72rem;
+  padding: 2rem;
+  margin: 0 auto;
+  color: #18221d;
+  font: 16px/1.6 system-ui, sans-serif;
+}
+
+.static-fallback a {
+  color: #17603e;
+}
+
+.static-fallback table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.static-fallback th,
+.static-fallback td {
+  padding: 0.65rem;
+  border: 1px solid #ccd5cf;
+  text-align: left;
+  vertical-align: top;
+}
