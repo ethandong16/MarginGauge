@@ -24,19 +24,19 @@ The calculator is an estimate. It does not model refunds, cancellations, chargeb
 
 ## Cloudflare Pages
 
-Set `CLOUDFLARE_WEB_ANALYTICS_TOKEN` in the Pages production environment to inject the standard Cloudflare Web Analytics beacon. The integration sends no custom events and calculator inputs must never be added to analytics attributes or payloads.
+The public Cloudflare Web Analytics site token is configured as `CLOUDFLARE_WEB_ANALYTICS_TOKEN` in `wrangler.toml`, which is the Pages configuration source of truth. The production build injects the standard beacon. The integration sends no custom events and calculator inputs must never be added to analytics attributes or payloads.
 
 Cloudflare Pages serves the static multi-page build. Redirects and security headers are defined in `public/_redirects` and `public/_headers`.
-Configure a Cloudflare account-level Redirect Rule from `www.margin-gauge.com/*` to `https://margin-gauge.com/${1}` with a permanent status; Pages `_redirects` accepts only relative URLs.
+An active Cloudflare Redirect Rule sends `www.margin-gauge.com/*` to `https://margin-gauge.com/${1}` with a permanent status and preserves query strings; Pages `_redirects` accepts only relative URLs.
 
-## Remaining launch inputs
+## Production release gate
 
-The Contact, Privacy, and Terms pages remain `noindex` drafts until the operator provides a legal name, public contact email, mailing address, jurisdiction, hosting-log retention details, and approved legal language. A 1200 x 630 Open Graph image is also required before public launch. No AdSense, GA4, advertising cookie, or publisher ID is included.
+The production site includes the operator information supplied for launch, public Contact, Privacy, Terms, and Disclaimer pages, and a 1200 x 630 Open Graph image. It intentionally does not include AdSense, GA4, advertising cookies, or a publisher ID.
 
-After adding the final legal content and `public/og-image.png`, build with the production analytics token and run the launch gate:
+Run the local and public release gates with:
 
 ```powershell
-$env:CLOUDFLARE_WEB_ANALYTICS_TOKEN = "the public site token"
+$env:CLOUDFLARE_WEB_ANALYTICS_TOKEN = "the public token from wrangler.toml"
 npm run build
 npm run verify:launch
 npm run verify:production
