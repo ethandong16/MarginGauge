@@ -1,3 +1,6 @@
 name = "margin-gauge"
 pages_build_output_dir = "dist"
 compatibility_date = "2026-09-04"
+
+[vars]
+CLOUDFLARE_WEB_ANALYTICS_TOKEN = "d827456074924307ba7aacbe3dc2af43"
