@@ -2,6 +2,7 @@ const origin = "https://margin-gauge.com";
 const failures = [];
 
 const pages = new Map([
+  ["/guides/how-to-price-etsy-products/", `${origin}/guides/how-to-price-etsy-products/`],
   ["/", `${origin}/`],
   ["/etsy-profit-calculator/", `${origin}/etsy-profit-calculator/`],
   ["/about/", `${origin}/about/`],
@@ -29,6 +30,7 @@ for (const [path, canonical] of pages) {
 }
 
 for (const path of [
+  "/guides/how-to-price-etsy-products",
   "/etsy-profit-calculator",
   "/guides/etsy-fees-for-us-sellers",
   "/guides/how-to-calculate-etsy-profit",

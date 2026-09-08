@@ -13,4 +13,11 @@ export const PUBLISHED_GUIDES = [
     summary: "Build an order-level contribution model from seller revenue, Etsy fees, operating costs, and allocated advertising spend.",
     url: "/guides/how-to-calculate-etsy-profit/",
   },
+  {
+    id: "how-to-price-etsy-products",
+    eyebrow: "Pricing decisions",
+    title: "How to Price Etsy Products for Profit",
+    summary: "Set a contribution target after product costs, labor, packaging, shipping, and Etsy fees.",
+    url: "/guides/how-to-price-etsy-products/",
+  },
 ] as const;

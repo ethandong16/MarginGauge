@@ -8,7 +8,7 @@ This tracker implements the first four-week editorial release without creating u
 |---|---:|---|
 | Etsy Fees for US Sellers: 2026 Rates and Examples | 2026-09-04 | Published and live |
 | How to Calculate Etsy Profit Per Order | 2026-09-04 | Published and live |
-| How to Price Etsy Products for Profit | 2026-09-08 | Planned |
+| How to Price Etsy Products for Profit | 2026-09-08 | Release prepared; production verification pending |
 | Does Etsy Charge Fees on Shipping? A Profit Example | 2026-09-10 | Planned |
 | Etsy Offsite Ads Fees: 12%, 15%, and the $100 Cap | 2026-09-15 | Planned |
 | Etsy Share & Save vs Offsite Ads: Fee and Profit Comparison | 2026-09-17 | Planned |
@@ -24,6 +24,16 @@ This tracker implements the first four-week editorial release without creating u
 - Run tests, type checking, production build, static verification, and 320/390/1280 browser QA before deployment.
 
 ## Search Console operations
+
+## G3 release — 2026-09-08
+
+- Official Fees & Payments Policy and Etsy Payments Policy rechecked on publication day; relevant rates unchanged. Evidence and engine inputs are in G3_RELEASE.md.
+- Complete example: $25.91 price, $13.00 operating costs, $2.91 Etsy fees, $10.00 contribution, 38.60% margin. Existing engine verifies the previous cent misses the target.
+- 71 tests, type check, production build, 10-route static verification, and launch readiness passed.
+- Local browser QA passed at 320, 390, and 1280px: no horizontal overflow, one H1, canonical, Article/BreadcrumbList, and calculator/G1/G2 links present.
+- Homepage, calculator, G1/G2 contextual links, sitemap, build inputs, redirects, and verification routes include G3. No unpublished page was created.
+
+## Search Console status
 
 Google Search Console was initialized on 2026-09-04. The `margin-gauge.com` Domain property is verified through a Cloudflare DNS TXT record. The verification value is intentionally not stored in this repository.
 

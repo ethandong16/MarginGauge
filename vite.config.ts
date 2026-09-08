@@ -11,6 +11,7 @@ const pageInputs = {
   disclaimer: "disclaimer/index.html",
   etsyFeesGuide: "guides/etsy-fees-for-us-sellers/index.html",
   etsyProfitGuide: "guides/how-to-calculate-etsy-profit/index.html",
+  etsyPricingGuide: "guides/how-to-price-etsy-products/index.html",
   notFound: "404.html",
 };
 

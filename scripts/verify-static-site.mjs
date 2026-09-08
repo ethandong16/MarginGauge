@@ -3,6 +3,7 @@ import { join } from "node:path";
 
 const dist = join(process.cwd(), "dist");
 const routes = new Map([
+  ["/guides/how-to-price-etsy-products/", ["guides/how-to-price-etsy-products/index.html", "https://margin-gauge.com/guides/how-to-price-etsy-products/"]],
   ["/", ["index.html", "https://margin-gauge.com/"]],
   ["/etsy-profit-calculator/", ["etsy-profit-calculator/index.html", "https://margin-gauge.com/etsy-profit-calculator/"]],
   ["/about/", ["about/index.html", "https://margin-gauge.com/about/"]],
@@ -54,6 +55,7 @@ for (const required of ["Current fee bases", "Frequently asked questions", "Offi
 }
 
 for (const file of [
+  "guides/how-to-price-etsy-products/index.html",
   "guides/etsy-fees-for-us-sellers/index.html",
   "guides/how-to-calculate-etsy-profit/index.html",
 ]) {
@@ -67,6 +69,7 @@ for (const file of [
 
 const sitemap = read("sitemap.xml");
 for (const path of [
+  "/guides/how-to-price-etsy-products/",
   "/guides/etsy-fees-for-us-sellers/",
   "/guides/how-to-calculate-etsy-profit/",
 ]) {
