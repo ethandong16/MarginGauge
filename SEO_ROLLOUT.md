@@ -33,7 +33,7 @@ This tracker implements the first four-week editorial release without creating u
 - Production release commit: 47d8493. URL: https://margin-gauge.com/guides/how-to-price-etsy-products/.
 - Production verifier passed all 10 pages, redirects, canonical metadata, 404 behavior, and security headers. Live sitemap contains G3 with 2026-09-08 lastmod.
 - Production browser checks passed at 320/390/1280px with no overflow, console errors, or page errors; Article/BreadcrumbList, self-canonical, existing analytics, outbound internal links, and all four inbound links verified.
-- No AdSense, GA4, advertising cookies, or publisher ID added. G3 Search Console inspection/request has not been performed in this release session.
+- No AdSense, GA4, advertising cookies, or publisher ID added. G3 was inspected in Search Console on 2026-09-08; the indexed-data status was `URL is not on Google` / `URL is unknown to Google`. Google's live indexability check completed and the one-time request returned `Indexing requested`, adding the URL to the priority crawl queue.
 
 ## Search Console status
 
@@ -41,6 +41,7 @@ Google Search Console was initialized on 2026-09-04. The `margin-gauge.com` Doma
 
 - `https://margin-gauge.com/sitemap.xml` was submitted successfully and reported five discovered pages on 2026-09-04.
 - Indexing was requested once for the home page, Etsy calculator, Etsy fee guide, and Etsy profit guide on 2026-09-04.
+- Indexing was requested once for `https://margin-gauge.com/guides/how-to-price-etsy-products/` on 2026-09-08. Before the request, Google reported the URL as unknown; the live indexability check passed and Search Console confirmed that the URL was added to its priority crawl queue.
 - Live inspection reported both published guides as available to Google. Manual Actions and Security Issues reported no issues.
 
 - Keep the DNS verification record in place.
