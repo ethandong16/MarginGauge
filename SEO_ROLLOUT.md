@@ -8,7 +8,7 @@ This tracker implements the first four-week editorial release without creating u
 |---|---:|---|
 | Etsy Fees for US Sellers: 2026 Rates and Examples | 2026-09-04 | Published and live |
 | How to Calculate Etsy Profit Per Order | 2026-09-04 | Published and live |
-| How to Price Etsy Products for Profit | 2026-09-08 | Release prepared; production verification pending |
+| How to Price Etsy Products for Profit | 2026-09-08 | Published and live |
 | Does Etsy Charge Fees on Shipping? A Profit Example | 2026-09-10 | Planned |
 | Etsy Offsite Ads Fees: 12%, 15%, and the $100 Cap | 2026-09-15 | Planned |
 | Etsy Share & Save vs Offsite Ads: Fee and Profit Comparison | 2026-09-17 | Planned |
@@ -23,8 +23,6 @@ This tracker implements the first four-week editorial release without creating u
 - Add only published URLs to the home page, calculator, sitemap, build inputs, redirects, and verification scripts.
 - Run tests, type checking, production build, static verification, and 320/390/1280 browser QA before deployment.
 
-## Search Console operations
-
 ## G3 release — 2026-09-08
 
 - Official Fees & Payments Policy and Etsy Payments Policy rechecked on publication day; relevant rates unchanged. Evidence and engine inputs are in G3_RELEASE.md.
@@ -32,6 +30,10 @@ This tracker implements the first four-week editorial release without creating u
 - 71 tests, type check, production build, 10-route static verification, and launch readiness passed.
 - Local browser QA passed at 320, 390, and 1280px: no horizontal overflow, one H1, canonical, Article/BreadcrumbList, and calculator/G1/G2 links present.
 - Homepage, calculator, G1/G2 contextual links, sitemap, build inputs, redirects, and verification routes include G3. No unpublished page was created.
+- Production release commit: 47d8493. URL: https://margin-gauge.com/guides/how-to-price-etsy-products/.
+- Production verifier passed all 10 pages, redirects, canonical metadata, 404 behavior, and security headers. Live sitemap contains G3 with 2026-09-08 lastmod.
+- Production browser checks passed at 320/390/1280px with no overflow, console errors, or page errors; Article/BreadcrumbList, self-canonical, existing analytics, outbound internal links, and all four inbound links verified.
+- No AdSense, GA4, advertising cookies, or publisher ID added. G3 Search Console inspection/request has not been performed in this release session.
 
 ## Search Console status
 
