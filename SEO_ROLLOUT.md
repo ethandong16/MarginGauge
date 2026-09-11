@@ -9,7 +9,7 @@ This tracker implements the first four-week editorial release without creating u
 | Etsy Fees for US Sellers: 2026 Rates and Examples | 2026-09-04 | Published and live |
 | How to Calculate Etsy Profit Per Order | 2026-09-04 | Published and live |
 | How to Price Etsy Products for Profit | 2026-09-08 | Published and live |
-| Does Etsy Charge Fees on Shipping? A Profit Example | 2026-09-11 | Ready to publish |
+| Does Etsy Charge Fees on Shipping? A Profit Example | 2026-09-11 | Published and live |
 | Etsy Offsite Ads Fees: 12%, 15%, and the $100 Cap | 2026-09-15 | Planned |
 | Etsy Share & Save vs Offsite Ads: Fee and Profit Comparison | 2026-09-17 | Planned |
 | Does Etsy Charge Seller Fees on Sales Tax? | 2026-09-22 | Planned |
@@ -41,7 +41,7 @@ This tracker implements the first four-week editorial release without creating u
 - Worked example is checked by the existing engine: $30 item + $6 buyer-paid shipping, $10 COGS, $1 packaging, and $5 actual label produces $36 seller revenue, $3.87 Etsy fees, $16.00 operating costs, and $16.13 contribution profit. The same order with free shipping produces $10.70 contribution profit.
 - The guide distinguishes buyer-paid shipping from actual seller shipping cost, links the Etsy Fees Policy, US processing rates, shipping-label, and insurance sources, and discloses estimate limits.
 - Added Article and BreadcrumbList JSON-LD, self-canonical metadata, editorial byline, contextual links, sitemap entry, trailing-slash redirect, static route verification, and the G4 regression test.
-- 72 tests, type check, production build with the existing Cloudflare Web Analytics token, launch readiness, and static verification passed. Production browser and URL verification remain to be recorded after the Pages deployment completes.
+- 72 tests, type check, production build with the existing Cloudflare Web Analytics token, launch readiness, and static verification passed before release. Commit `b7dbe32` was pushed to `main`; Cloudflare Pages deployed the site, and production verification passed for the G4 page, canonical metadata, trailing-slash redirect, 404 behavior, and security headers. The live page returned HTTP 200 with the published title, worked-example amount, canonical URL, and analytics beacon.
 
 ## Search Console status
 
