@@ -20,4 +20,11 @@ export const PUBLISHED_GUIDES = [
     summary: "Set a contribution target after product costs, labor, packaging, shipping, and Etsy fees.",
     url: "/guides/how-to-price-etsy-products/",
   },
+  {
+    id: "etsy-fees-on-shipping",
+    eyebrow: "Shipping and profit",
+    title: "Does Etsy Charge Fees on Shipping? A Profit Example",
+    summary: "Separate buyer-paid shipping from your actual label cost and see how each amount changes Etsy order profit.",
+    url: "/guides/etsy-fees-on-shipping/",
+  },
 ] as const;

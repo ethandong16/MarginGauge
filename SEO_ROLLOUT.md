@@ -9,7 +9,7 @@ This tracker implements the first four-week editorial release without creating u
 | Etsy Fees for US Sellers: 2026 Rates and Examples | 2026-09-04 | Published and live |
 | How to Calculate Etsy Profit Per Order | 2026-09-04 | Published and live |
 | How to Price Etsy Products for Profit | 2026-09-08 | Published and live |
-| Does Etsy Charge Fees on Shipping? A Profit Example | 2026-09-10 | Planned |
+| Does Etsy Charge Fees on Shipping? A Profit Example | 2026-09-11 | Ready to publish |
 | Etsy Offsite Ads Fees: 12%, 15%, and the $100 Cap | 2026-09-15 | Planned |
 | Etsy Share & Save vs Offsite Ads: Fee and Profit Comparison | 2026-09-17 | Planned |
 | Does Etsy Charge Seller Fees on Sales Tax? | 2026-09-22 | Planned |
@@ -34,6 +34,14 @@ This tracker implements the first four-week editorial release without creating u
 - Production verifier passed all 10 pages, redirects, canonical metadata, 404 behavior, and security headers. Live sitemap contains G3 with 2026-09-08 lastmod.
 - Production browser checks passed at 320/390/1280px with no overflow, console errors, or page errors; Article/BreadcrumbList, self-canonical, existing analytics, outbound internal links, and all four inbound links verified.
 - No AdSense, GA4, advertising cookies, or publisher ID added. G3 was inspected in Search Console on 2026-09-08; the indexed-data status was `URL is not on Google` / `URL is unknown to Google`. Google's live indexability check completed and the one-time request returned `Indexing requested`, adding the URL to the priority crawl queue.
+
+## G4 release — 2026-09-11
+
+- Added `/guides/etsy-fees-on-shipping/` for the single intent “Does Etsy charge fees on shipping?” under the supported US Etsy.com / US bank / USD scope.
+- Worked example is checked by the existing engine: $30 item + $6 buyer-paid shipping, $10 COGS, $1 packaging, and $5 actual label produces $36 seller revenue, $3.87 Etsy fees, $16.00 operating costs, and $16.13 contribution profit. The same order with free shipping produces $10.70 contribution profit.
+- The guide distinguishes buyer-paid shipping from actual seller shipping cost, links the Etsy Fees Policy, US processing rates, shipping-label, and insurance sources, and discloses estimate limits.
+- Added Article and BreadcrumbList JSON-LD, self-canonical metadata, editorial byline, contextual links, sitemap entry, trailing-slash redirect, static route verification, and the G4 regression test.
+- 72 tests, type check, production build with the existing Cloudflare Web Analytics token, launch readiness, and static verification passed. Production browser and URL verification remain to be recorded after the Pages deployment completes.
 
 ## Search Console status
 

@@ -29,6 +29,7 @@ if (!existsSync(ogPath)) {
 }
 
 for (const file of [
+  "guides/etsy-fees-on-shipping/index.html",
   "guides/how-to-price-etsy-products/index.html",
   "index.html",
   "etsy-profit-calculator/index.html",
