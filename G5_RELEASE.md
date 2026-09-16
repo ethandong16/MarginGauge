@@ -31,4 +31,6 @@ The published values are guarded by `src/content/offsite-ads-example.test.ts`. N
 
 ## Release gates
 
-75 tests, type checking, production build with the existing Cloudflare Web Analytics token, launch readiness, and 12-route static verification passed. Browser QA passed at 320, 390, and 1280px with no page overflow, one H1, the self-canonical, Article/BreadcrumbList data, calculator links, local table scrolling, and no page console errors. Production deployment and URL verification are recorded only after the release commit is live.
+75 tests, type checking, production build with the existing Cloudflare Web Analytics token, launch readiness, and 12-route static verification passed. Local browser QA passed at 320, 390, and 1280px with no page overflow, one H1, the self-canonical, Article/BreadcrumbList data, calculator links, local table scrolling, and no page console errors.
+
+Release commit `7d5f318` was pushed to `main`; Cloudflare Pages deployed the site, and production verification passed all 12 pages, canonical metadata, trailing-slash redirects, 404 behavior, and security headers. The live G5 page returned HTTP 200 and passed 320/390/1280 browser checks with the published title, $37.70 example result, self-canonical, Article/BreadcrumbList data, existing Analytics beacon, no page overflow, and no console errors.
