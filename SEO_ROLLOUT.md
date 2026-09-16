@@ -51,6 +51,7 @@ This tracker implements the first four-week editorial release without creating u
 - Added Article and BreadcrumbList JSON-LD, self-canonical metadata, editorial byline, contextual links, sitemap entry, trailing-slash redirect, static route verification, and the G5 regression test.
 - 75 tests, type check, production build with the existing Cloudflare Web Analytics token, launch readiness, and 12-route static verification passed. Local browser QA passed at 320, 390, and 1280px with no page overflow, one H1, the self-canonical, Article/BreadcrumbList data, calculator links, local table scrolling, and no page console errors.
 - Release commit `7d5f318` was pushed to `main`; Cloudflare Pages deployed the site, and production verification passed all 12 pages, canonical metadata, trailing-slash redirects, 404 behavior, and security headers. The live G5 page returned HTTP 200 and passed 320/390/1280 browser checks with the published title, $37.70 example result, self-canonical, Article/BreadcrumbList data, existing Analytics beacon, no page overflow, and no console errors.
+- Search Console URL Inspection on 2026-09-16 reported `URL is not on Google` / `URL is unknown to Google` and no referring sitemap detected yet. The live test reported `URL is available to Google`, confirmed that the page can be indexed, and detected one valid Breadcrumbs item. The one-time request returned `Indexing requested`, adding G5 to the priority crawl queue.
 
 ## Search Console status
 
@@ -59,6 +60,7 @@ Google Search Console was initialized on 2026-09-04. The `margin-gauge.com` Doma
 - `https://margin-gauge.com/sitemap.xml` was submitted successfully and reported five discovered pages on 2026-09-04.
 - Indexing was requested once for the home page, Etsy calculator, Etsy fee guide, and Etsy profit guide on 2026-09-04.
 - Indexing was requested once for `https://margin-gauge.com/guides/how-to-price-etsy-products/` on 2026-09-08. Before the request, Google reported the URL as unknown; the live indexability check passed and Search Console confirmed that the URL was added to its priority crawl queue.
+- Indexing was requested once for `https://margin-gauge.com/guides/etsy-offsite-ads-fees/` on 2026-09-16. Before the request, Google reported the URL as unknown and had not yet associated a referring sitemap; the live indexability check passed, one valid Breadcrumbs item was detected, and Search Console confirmed that the URL was added to its priority crawl queue.
 - Live inspection reported both published guides as available to Google. Manual Actions and Security Issues reported no issues.
 
 - Keep the DNS verification record in place.
