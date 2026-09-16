@@ -3,6 +3,7 @@ import { join } from "node:path";
 
 const dist = join(process.cwd(), "dist");
 const routes = new Map([
+  ["/guides/etsy-offsite-ads-fees/", ["guides/etsy-offsite-ads-fees/index.html", "https://margin-gauge.com/guides/etsy-offsite-ads-fees/"]],
   ["/guides/etsy-fees-on-shipping/", ["guides/etsy-fees-on-shipping/index.html", "https://margin-gauge.com/guides/etsy-fees-on-shipping/"]],
   ["/guides/how-to-price-etsy-products/", ["guides/how-to-price-etsy-products/index.html", "https://margin-gauge.com/guides/how-to-price-etsy-products/"]],
   ["/", ["index.html", "https://margin-gauge.com/"]],
@@ -55,7 +56,20 @@ for (const required of ["Current fee bases", "Frequently asked questions", "Offi
   if (!calculator.includes(required)) failures.push(`calculator static HTML: missing ${required}`);
 }
 
+const offsiteAdsHref = 'href="/guides/etsy-offsite-ads-fees/"';
 for (const file of [
+  "index.html",
+  "etsy-profit-calculator/index.html",
+  "guides/etsy-fees-for-us-sellers/index.html",
+  "guides/how-to-calculate-etsy-profit/index.html",
+  "guides/how-to-price-etsy-products/index.html",
+  "guides/etsy-fees-on-shipping/index.html",
+]) {
+  if (!read(file).includes(offsiteAdsHref)) failures.push(`${file}: missing G5 contextual link`);
+}
+
+for (const file of [
+  "guides/etsy-offsite-ads-fees/index.html",
   "guides/etsy-fees-on-shipping/index.html",
   "guides/how-to-price-etsy-products/index.html",
   "guides/etsy-fees-for-us-sellers/index.html",
@@ -71,6 +85,7 @@ for (const file of [
 
 const sitemap = read("sitemap.xml");
 for (const path of [
+  "/guides/etsy-offsite-ads-fees/",
   "/guides/etsy-fees-on-shipping/",
   "/guides/how-to-price-etsy-products/",
   "/guides/etsy-fees-for-us-sellers/",

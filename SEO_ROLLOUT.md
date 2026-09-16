@@ -10,7 +10,7 @@ This tracker implements the first four-week editorial release without creating u
 | How to Calculate Etsy Profit Per Order | 2026-09-04 | Published and live |
 | How to Price Etsy Products for Profit | 2026-09-08 | Published and live |
 | Does Etsy Charge Fees on Shipping? A Profit Example | 2026-09-11 | Published and live |
-| Etsy Offsite Ads Fees: 12%, 15%, and the $100 Cap | 2026-09-15 | Planned |
+| Etsy Offsite Ads Fees: 12%, 15%, and the $100 Cap | 2026-09-16 | Ready to publish |
 | Etsy Share & Save vs Offsite Ads: Fee and Profit Comparison | 2026-09-17 | Planned |
 | Does Etsy Charge Seller Fees on Sales Tax? | 2026-09-22 | Planned |
 
@@ -42,6 +42,14 @@ This tracker implements the first four-week editorial release without creating u
 - The guide distinguishes buyer-paid shipping from actual seller shipping cost, links the Etsy Fees Policy, US processing rates, shipping-label, and insurance sources, and discloses estimate limits.
 - Added Article and BreadcrumbList JSON-LD, self-canonical metadata, editorial byline, contextual links, sitemap entry, trailing-slash redirect, static route verification, and the G4 regression test.
 - 72 tests, type check, production build with the existing Cloudflare Web Analytics token, launch readiness, and static verification passed before release. Commit `b7dbe32` was pushed to `main`; Cloudflare Pages deployed the site, and production verification passed for the G4 page, canonical metadata, trailing-slash redirect, 404 behavior, and security headers. The live page returned HTTP 200 with the published title, worked-example amount, canonical URL, and analytics beacon.
+
+## G5 release — 2026-09-16
+
+- Added `/guides/etsy-offsite-ads-fees/` for the single intent "Etsy Offsite Ads fees" under the supported US Etsy.com / US bank / USD scope.
+- Official Fees & Payments Policy, Advertising & Marketing Policy, Offsite Ads Help Center guidance, and Etsy-funded coupon guidance were rechecked on publication day. The 12% and 15% rates, rolling sales-tier rule, 30-day attribution window, US fee base, and $100 per-order cap remain unchanged. Evidence is in `G5_RELEASE.md`.
+- The existing engine checks a $130 seller-revenue order with $60 operating costs: no attribution produces $57.20 contribution, a 15% attributed order produces $37.70, and a confirmed 12% attributed order produces $41.60. A separate $1,000 order verifies the $100 cap for both tiers.
+- Added Article and BreadcrumbList JSON-LD, self-canonical metadata, editorial byline, contextual links, sitemap entry, trailing-slash redirect, static route verification, and the G5 regression test.
+- 75 tests, type check, production build with the existing Cloudflare Web Analytics token, launch readiness, and 12-route static verification passed. Browser QA passed at 320, 390, and 1280px with no page overflow, one H1, the self-canonical, Article/BreadcrumbList data, calculator links, local table scrolling, and no page console errors. Production deployment and URL verification remain to be recorded after the release commit is live.
 
 ## Search Console status
 

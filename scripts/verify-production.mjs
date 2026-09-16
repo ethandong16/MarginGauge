@@ -2,6 +2,7 @@ const origin = "https://margin-gauge.com";
 const failures = [];
 
 const pages = new Map([
+  ["/guides/etsy-offsite-ads-fees/", `${origin}/guides/etsy-offsite-ads-fees/`],
   ["/guides/etsy-fees-on-shipping/", `${origin}/guides/etsy-fees-on-shipping/`],
   ["/guides/how-to-price-etsy-products/", `${origin}/guides/how-to-price-etsy-products/`],
   ["/", `${origin}/`],
@@ -22,6 +23,16 @@ for (const [path, canonical] of pages) {
     if (response.status !== 200) failures.push(`${path}: expected 200, received ${response.status}`);
     if (!html.includes(`<link rel="canonical" href="${canonical}"`)) failures.push(`${path}: canonical mismatch`);
     if (!/<h1[\s>]/i.test(html)) failures.push(`${path}: missing static H1`);
+    if (path === "/guides/etsy-offsite-ads-fees/") {
+      for (const required of [
+        "Etsy Offsite Ads Fees: 12%, 15%, and the $100 Cap",
+        'data-example-fifteenProfit="3770"',
+        '"@type": "Article"',
+        '"@type": "BreadcrumbList"',
+      ]) {
+        if (!html.includes(required)) failures.push(`${path}: missing G5 evidence ${required}`);
+      }
+    }
     for (const header of ["content-security-policy", "x-content-type-options", "referrer-policy", "permissions-policy"]) {
       if (!response.headers.get(header)) failures.push(`${path}: missing ${header}`);
     }
@@ -31,6 +42,7 @@ for (const [path, canonical] of pages) {
 }
 
 for (const path of [
+  "/guides/etsy-offsite-ads-fees",
   "/guides/etsy-fees-on-shipping",
   "/guides/how-to-price-etsy-products",
   "/etsy-profit-calculator",

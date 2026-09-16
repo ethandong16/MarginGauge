@@ -27,4 +27,11 @@ export const PUBLISHED_GUIDES = [
     summary: "Separate buyer-paid shipping from your actual label cost and see how each amount changes Etsy order profit.",
     url: "/guides/etsy-fees-on-shipping/",
   },
+  {
+    id: "etsy-offsite-ads-fees",
+    eyebrow: "Advertising fees",
+    title: "Etsy Offsite Ads Fees: 12%, 15%, and the $100 Cap",
+    summary: "Confirm the attributed-order tier, apply the per-order cap, and compare the fee's effect on contribution profit.",
+    url: "/guides/etsy-offsite-ads-fees/",
+  },
 ] as const;

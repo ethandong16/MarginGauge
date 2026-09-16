@@ -13,6 +13,7 @@ const pageInputs = {
   etsyProfitGuide: "guides/how-to-calculate-etsy-profit/index.html",
   etsyPricingGuide: "guides/how-to-price-etsy-products/index.html",
   etsyShippingGuide: "guides/etsy-fees-on-shipping/index.html",
+  etsyOffsiteAdsGuide: "guides/etsy-offsite-ads-fees/index.html",
   notFound: "404.html",
 };
 
