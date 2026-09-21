@@ -14,6 +14,7 @@ const pageInputs = {
   etsyPricingGuide: "guides/how-to-price-etsy-products/index.html",
   etsyShippingGuide: "guides/etsy-fees-on-shipping/index.html",
   etsyOffsiteAdsGuide: "guides/etsy-offsite-ads-fees/index.html",
+  etsyShareSaveGuide: "guides/etsy-share-save-vs-offsite-ads/index.html",
   notFound: "404.html",
 };
 

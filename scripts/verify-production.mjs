@@ -2,6 +2,7 @@ const origin = "https://margin-gauge.com";
 const failures = [];
 
 const pages = new Map([
+  ["/guides/etsy-share-save-vs-offsite-ads/", `${origin}/guides/etsy-share-save-vs-offsite-ads/`],
   ["/guides/etsy-offsite-ads-fees/", `${origin}/guides/etsy-offsite-ads-fees/`],
   ["/guides/etsy-fees-on-shipping/", `${origin}/guides/etsy-fees-on-shipping/`],
   ["/guides/how-to-price-etsy-products/", `${origin}/guides/how-to-price-etsy-products/`],
@@ -33,6 +34,17 @@ for (const [path, canonical] of pages) {
         if (!html.includes(required)) failures.push(`${path}: missing G5 evidence ${required}`);
       }
     }
+    if (path === "/guides/etsy-share-save-vs-offsite-ads/") {
+      for (const required of [
+        "Etsy Share &amp; Save vs Offsite Ads: Fees and Profit",
+        'data-example-shareProfit="6240"',
+        'data-example-fifteenProfit="3770"',
+        '"@type": "Article"',
+        '"@type": "BreadcrumbList"',
+      ]) {
+        if (!html.includes(required)) failures.push(`${path}: missing G6 evidence ${required}`);
+      }
+    }
     for (const header of ["content-security-policy", "x-content-type-options", "referrer-policy", "permissions-policy"]) {
       if (!response.headers.get(header)) failures.push(`${path}: missing ${header}`);
     }
@@ -42,6 +54,7 @@ for (const [path, canonical] of pages) {
 }
 
 for (const path of [
+  "/guides/etsy-share-save-vs-offsite-ads",
   "/guides/etsy-offsite-ads-fees",
   "/guides/etsy-fees-on-shipping",
   "/guides/how-to-price-etsy-products",

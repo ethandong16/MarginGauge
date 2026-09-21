@@ -511,7 +511,8 @@
   }
 
   .static-main {
-    width: min(100% - 1.25rem, 1120px);
+    width: calc(100% - 1.25rem);
+    max-width: 1120px;
     padding-top: 2.5rem;
   }
 
@@ -529,20 +530,28 @@
 
   .static-footer {
     grid-template-columns: 1fr;
-    width: min(100% - 1.25rem, 1120px);
+    width: calc(100% - 1.25rem);
+    max-width: 1120px;
   }
 
   .guide-main {
-    width: min(100% - 1.25rem, 1120px);
+    width: calc(100% - 1.25rem);
+    max-width: 1120px;
     padding-top: 1.4rem;
   }
 
   .guide-header h1 {
     font-size: 2.35rem;
+    overflow-wrap: anywhere;
   }
 
   .guide-dek {
     font-size: 1rem;
+  }
+
+  .guide-scope {
+    max-width: 100%;
+    flex-wrap: wrap;
   }
 
   .guide-article h2 {

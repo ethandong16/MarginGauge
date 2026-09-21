@@ -34,4 +34,11 @@ export const PUBLISHED_GUIDES = [
     summary: "Confirm the attributed-order tier, apply the per-order cap, and compare the fee's effect on contribution profit.",
     url: "/guides/etsy-offsite-ads-fees/",
   },
+  {
+    id: "etsy-share-save-vs-offsite-ads",
+    eyebrow: "Traffic attribution",
+    title: "Etsy Share & Save vs Offsite Ads: Fees and Profit",
+    summary: "Compare the seller-driven fee credit with Etsy-driven 12% and 15% ad fees, including last-link attribution and profit impact.",
+    url: "/guides/etsy-share-save-vs-offsite-ads/",
+  },
 ] as const;

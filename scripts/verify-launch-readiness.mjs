@@ -29,6 +29,7 @@ if (!existsSync(ogPath)) {
 }
 
 for (const file of [
+  "guides/etsy-share-save-vs-offsite-ads/index.html",
   "guides/etsy-offsite-ads-fees/index.html",
   "guides/etsy-fees-on-shipping/index.html",
   "guides/how-to-price-etsy-products/index.html",
