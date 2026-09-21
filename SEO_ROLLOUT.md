@@ -11,7 +11,7 @@ This tracker implements the first four-week editorial release without creating u
 | How to Price Etsy Products for Profit | 2026-09-08 | Published and live |
 | Does Etsy Charge Fees on Shipping? A Profit Example | 2026-09-11 | Published and live |
 | Etsy Offsite Ads Fees: 12%, 15%, and the $100 Cap | 2026-09-16 | Published and live |
-| Etsy Share & Save vs Offsite Ads: Fee and Profit Comparison | 2026-09-17 | Planned |
+| Etsy Share & Save vs Offsite Ads: Fee and Profit Comparison | 2026-09-17 | Published and live 2026-09-21 |
 | Does Etsy Charge Seller Fees on Sales Tax? | 2026-09-22 | Planned |
 
 ## Per-release gate
@@ -53,6 +53,16 @@ This tracker implements the first four-week editorial release without creating u
 - Release commit `7d5f318` was pushed to `main`; Cloudflare Pages deployed the site, and production verification passed all 12 pages, canonical metadata, trailing-slash redirects, 404 behavior, and security headers. The live G5 page returned HTTP 200 and passed 320/390/1280 browser checks with the published title, $37.70 example result, self-canonical, Article/BreadcrumbList data, existing Analytics beacon, no page overflow, and no console errors.
 - Search Console URL Inspection on 2026-09-16 reported `URL is not on Google` / `URL is unknown to Google` and no referring sitemap detected yet. The live test reported `URL is available to Google`, confirmed that the page can be indexed, and detected one valid Breadcrumbs item. The one-time request returned `Indexing requested`, adding G5 to the priority crawl queue.
 
+## G6 release — 2026-09-21
+
+- Added `/guides/etsy-share-save-vs-offsite-ads/` for the single intent “Etsy Share & Save vs Offsite Ads” under the supported US Etsy.com / US bank / USD scope.
+- Official Share & Save Program Terms, Help Center guidance, introductory promotion terms, Advertising & Marketing Policy, and Fees & Payments Policy were rechecked on publication day. The standard 4% credit, invited-seller 6.5% introductory replacement credit, individual 14-day period, 30-day attribution window, last-link handling, and Offsite Ads exclusion remain published. Evidence is in `G6_RELEASE.md`.
+- The existing engine checks a $130 seller-revenue order with $60 operating costs: no attribution produces $57.20 contribution, standard Share & Save produces $62.40, the confirmed 6.5% introduction produces $65.65, Offsite Ads at 15% produces $37.70, and Offsite Ads at 12% produces $41.60.
+- Added Article and BreadcrumbList JSON-LD, self-canonical metadata, editorial byline, contextual links from all existing editorial entry points, sitemap entry, trailing-slash redirect, static and production verification, and a G6 regression test.
+- 77 tests, type checking, production build with the existing Cloudflare Web Analytics token, launch readiness, and 13-route static verification passed. Responsive browser verification at 320/390/1280px confirmed no horizontal page overflow, one H1, the self-canonical, valid JSON-LD, the $62.40 example, and calculator links.
+- Release commit `62160e1` was pushed to `main`; Cloudflare Pages deployed the site, and production verification passed all 13 pages, canonical metadata, trailing-slash redirects, 404 behavior, and security headers. The live page, sitemap, and robots.txt returned HTTP 200, and the discoverability checks passed.
+- The operator confirmed completing the one-time Search Console indexing request on 2026-09-21 after the production page and sitemap were live. The initial indexed-data status and live-test detail were not separately captured, so no additional Search Console result is inferred.
+
 ## Search Console status
 
 Google Search Console was initialized on 2026-09-04. The `margin-gauge.com` Domain property is verified through a Cloudflare DNS TXT record. The verification value is intentionally not stored in this repository.
@@ -61,6 +71,7 @@ Google Search Console was initialized on 2026-09-04. The `margin-gauge.com` Doma
 - Indexing was requested once for the home page, Etsy calculator, Etsy fee guide, and Etsy profit guide on 2026-09-04.
 - Indexing was requested once for `https://margin-gauge.com/guides/how-to-price-etsy-products/` on 2026-09-08. Before the request, Google reported the URL as unknown; the live indexability check passed and Search Console confirmed that the URL was added to its priority crawl queue.
 - Indexing was requested once for `https://margin-gauge.com/guides/etsy-offsite-ads-fees/` on 2026-09-16. Before the request, Google reported the URL as unknown and had not yet associated a referring sitemap; the live indexability check passed, one valid Breadcrumbs item was detected, and Search Console confirmed that the URL was added to its priority crawl queue.
+- Indexing was requested once for `https://margin-gauge.com/guides/etsy-share-save-vs-offsite-ads/` on 2026-09-21 after the live page and updated sitemap were verified. The operator confirmed submission; the pre-request indexed-data status was not recorded.
 - Live inspection reported both published guides as available to Google. Manual Actions and Security Issues reported no issues.
 
 - Keep the DNS verification record in place.
