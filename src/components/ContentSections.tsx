@@ -1,6 +1,5 @@
 import { ArrowUpRight, BookOpen, ExternalLink, FileClock } from "lucide-react";
 import {
-  CHANGELOG_ENTRIES,
   FAQ_ITEMS,
   FEE_GUIDE_ITEMS,
   METHODOLOGY_FORMULAS,
@@ -239,29 +238,6 @@ export function ContentSections() {
         </div>
       </section>
 
-      <section className="content-band changelog-band" id="changelog" aria-labelledby="changelog-title">
-        <div className="content-inner narrow-inner">
-          <p className="section-label">Version history</p>
-          <h2 id="changelog-title">Changelog</h2>
-          <div className="changelog-list">
-            {CHANGELOG_ENTRIES.map((entry) => (
-              <article key={`${entry.date}-${entry.version}`}>
-                <div>
-                  <time dateTime={entry.date}>{entry.date}</time>
-                  <span>v{entry.version}</span>
-                </div>
-                <h3>{entry.title}</h3>
-                <ul>
-                  {entry.changes.map((change) => (
-                    <li key={change}>{change}</li>
-                  ))}
-                </ul>
-                {entry.catalogId && <code>{entry.catalogId}</code>}
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

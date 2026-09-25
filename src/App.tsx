@@ -1008,7 +1008,6 @@ export default function App() {
           <a href="/privacy/">Privacy</a>
           <a href="/terms/">Terms</a>
           <a href="/disclaimer/">Disclaimer</a>
-          <a href="#changelog">Changelog</a>
           <a href="https://www.etsy.com/legal/fees/" target="_blank" rel="noreferrer">
             Etsy fee policy <ArrowUpRight size={14} aria-hidden="true" />
           </a>

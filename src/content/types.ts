@@ -55,11 +55,3 @@ export interface PrivacySection {
   paragraphs: readonly string[];
   bullets?: readonly string[];
 }
-
-export interface ChangelogEntry {
-  date: string;
-  version: string;
-  catalogId?: string;
-  title: string;
-  changes: readonly string[];
-}
