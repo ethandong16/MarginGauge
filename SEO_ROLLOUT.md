@@ -12,7 +12,7 @@ This tracker implements the first four-week editorial release without creating u
 | Does Etsy Charge Fees on Shipping? A Profit Example | 2026-09-11 | Published and live |
 | Etsy Offsite Ads Fees: 12%, 15%, and the $100 Cap | 2026-09-16 | Published and live |
 | Etsy Share & Save vs Offsite Ads: Fee and Profit Comparison | 2026-09-17 | Published and live 2026-09-21 |
-| Does Etsy Charge Seller Fees on Sales Tax? | 2026-09-22 | Published 2026-09-25; production deploy pending configured analytics-token environment |
+| Does Etsy Charge Seller Fees on Sales Tax? | 2026-09-22 | Published and live 2026-09-25 |
 
 ## Per-release gate
 
@@ -41,7 +41,7 @@ This tracker implements the first four-week editorial release without creating u
 - Official Fees & Payments Policy, Etsy Payments processing guidance, US marketplace sales-tax guidance, and Texas seller-fee tax guidance were rechecked on publication day. The supported model keeps buyer sales tax out of seller revenue and the 6.5% transaction-fee base, while applicable sales tax can enter the payment-processing base. Texas seller-fee tax remains a separate rule effective October 1, 2025. Evidence is in `G7_RELEASE.md`.
 - The existing engine checks a $36 seller-revenue order with $2.40 buyer sales tax and $16.00 operating costs: taxed contribution is $16.06, compared with $16.13 without sales tax. The $0.07 difference is payment processing only.
 - Added Article and BreadcrumbList JSON-LD, self-canonical metadata, editorial byline, contextual links from all existing editorial entry points, sitemap entry, trailing-slash redirect, static route verification, launch-readiness coverage, and a G7 regression test.
-- 78 tests, type checking, production build, and 14-route static verification passed. Local launch-readiness verification is blocked only because `CLOUDFLARE_WEB_ANALYTICS_TOKEN` is not exposed in this shell; no token was invented or committed. Production deployment requires the configured release environment with the existing analytics token.
+- 78 tests, type checking, production build, and 14-route static verification passed. The first production check ran before Pages finished deploying and saw a temporary 404; after a 30-second wait, production verification passed all 14 pages, canonical metadata, trailing-slash redirects, 404 behavior, and security headers. The local launch-readiness script could not confirm the analytics beacon because `CLOUDFLARE_WEB_ANALYTICS_TOKEN` is not exposed in this shell; no token was invented or committed.
 
 ## G4 release — 2026-09-11
 
