@@ -2,6 +2,7 @@ const origin = "https://margin-gauge.com";
 const failures = [];
 
 const pages = new Map([
+  ["/guides/etsy-seller-fees-sales-tax/", `${origin}/guides/etsy-seller-fees-sales-tax/`],
   ["/guides/etsy-share-save-vs-offsite-ads/", `${origin}/guides/etsy-share-save-vs-offsite-ads/`],
   ["/guides/etsy-offsite-ads-fees/", `${origin}/guides/etsy-offsite-ads-fees/`],
   ["/guides/etsy-fees-on-shipping/", `${origin}/guides/etsy-fees-on-shipping/`],
@@ -45,6 +46,17 @@ for (const [path, canonical] of pages) {
         if (!html.includes(required)) failures.push(`${path}: missing G6 evidence ${required}`);
       }
     }
+    if (path === "/guides/etsy-seller-fees-sales-tax/") {
+      for (const required of [
+        "Does Etsy Charge Seller Fees on Sales Tax?",
+        'data-example-profit="1606"',
+        'data-example-noTaxProfit="1613"',
+        '"@type": "Article"',
+        '"@type": "BreadcrumbList"',
+      ]) {
+        if (!html.includes(required)) failures.push(`${path}: missing G7 evidence ${required}`);
+      }
+    }
     for (const header of ["content-security-policy", "x-content-type-options", "referrer-policy", "permissions-policy"]) {
       if (!response.headers.get(header)) failures.push(`${path}: missing ${header}`);
     }
@@ -55,6 +67,7 @@ for (const [path, canonical] of pages) {
 
 for (const path of [
   "/guides/etsy-share-save-vs-offsite-ads",
+  "/guides/etsy-seller-fees-sales-tax",
   "/guides/etsy-offsite-ads-fees",
   "/guides/etsy-fees-on-shipping",
   "/guides/how-to-price-etsy-products",

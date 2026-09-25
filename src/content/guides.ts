@@ -41,4 +41,11 @@ export const PUBLISHED_GUIDES = [
     summary: "Compare the seller-driven fee credit with Etsy-driven 12% and 15% ad fees, including last-link attribution and profit impact.",
     url: "/guides/etsy-share-save-vs-offsite-ads/",
   },
+  {
+    id: "etsy-seller-fees-sales-tax",
+    eyebrow: "Taxes and fee bases",
+    title: "Does Etsy Charge Seller Fees on Sales Tax?",
+    summary: "Separate buyer sales tax from seller revenue, transaction fees, and payment processing in a supported US order model.",
+    url: "/guides/etsy-seller-fees-sales-tax/",
+  },
 ] as const;

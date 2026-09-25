@@ -3,6 +3,7 @@ import { join } from "node:path";
 
 const dist = join(process.cwd(), "dist");
 const routes = new Map([
+  ["/guides/etsy-seller-fees-sales-tax/", ["guides/etsy-seller-fees-sales-tax/index.html", "https://margin-gauge.com/guides/etsy-seller-fees-sales-tax/"]],
   ["/guides/etsy-share-save-vs-offsite-ads/", ["guides/etsy-share-save-vs-offsite-ads/index.html", "https://margin-gauge.com/guides/etsy-share-save-vs-offsite-ads/"]],
   ["/guides/etsy-offsite-ads-fees/", ["guides/etsy-offsite-ads-fees/index.html", "https://margin-gauge.com/guides/etsy-offsite-ads-fees/"]],
   ["/guides/etsy-fees-on-shipping/", ["guides/etsy-fees-on-shipping/index.html", "https://margin-gauge.com/guides/etsy-fees-on-shipping/"]],
@@ -82,6 +83,20 @@ for (const file of [
   if (!read(file).includes(shareSaveHref)) failures.push(`${file}: missing G6 contextual link`);
 }
 
+const salesTaxHref = 'href="/guides/etsy-seller-fees-sales-tax/"';
+for (const file of [
+  "index.html",
+  "etsy-profit-calculator/index.html",
+  "guides/etsy-fees-for-us-sellers/index.html",
+  "guides/how-to-calculate-etsy-profit/index.html",
+  "guides/how-to-price-etsy-products/index.html",
+  "guides/etsy-fees-on-shipping/index.html",
+  "guides/etsy-offsite-ads-fees/index.html",
+  "guides/etsy-share-save-vs-offsite-ads/index.html",
+]) {
+  if (!read(file).includes(salesTaxHref)) failures.push(`${file}: missing G7 contextual link`);
+}
+
 for (const file of [
   "guides/etsy-share-save-vs-offsite-ads/index.html",
   "guides/etsy-offsite-ads-fees/index.html",
@@ -89,6 +104,7 @@ for (const file of [
   "guides/how-to-price-etsy-products/index.html",
   "guides/etsy-fees-for-us-sellers/index.html",
   "guides/how-to-calculate-etsy-profit/index.html",
+  "guides/etsy-seller-fees-sales-tax/index.html",
 ]) {
   const html = read(file);
   if (!html.includes('property="og:type" content="article"')) failures.push(`${file}: missing article Open Graph type`);
@@ -106,6 +122,7 @@ for (const path of [
   "/guides/how-to-price-etsy-products/",
   "/guides/etsy-fees-for-us-sellers/",
   "/guides/how-to-calculate-etsy-profit/",
+  "/guides/etsy-seller-fees-sales-tax/",
 ]) {
   if (!sitemap.includes(`https://margin-gauge.com${path}`)) failures.push(`sitemap: missing ${path}`);
 }
