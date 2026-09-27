@@ -2,6 +2,7 @@ const origin = "https://margin-gauge.com";
 const failures = [];
 
 const pages = new Map([
+  ["/guides/etsy-offsite-ads-pricing/", `${origin}/guides/etsy-offsite-ads-pricing/`],
   ["/guides/etsy-seller-fees-sales-tax/", `${origin}/guides/etsy-seller-fees-sales-tax/`],
   ["/guides/etsy-share-save-vs-offsite-ads/", `${origin}/guides/etsy-share-save-vs-offsite-ads/`],
   ["/guides/etsy-offsite-ads-fees/", `${origin}/guides/etsy-offsite-ads-fees/`],
@@ -57,6 +58,18 @@ for (const [path, canonical] of pages) {
         if (!html.includes(required)) failures.push(`${path}: missing G7 evidence ${required}`);
       }
     }
+    if (path === "/guides/etsy-offsite-ads-pricing/") {
+      for (const required of [
+        "How Offsite Ads Change Your Etsy Target Price",
+        'data-example-nonePrice="2309"',
+        'data-example-fifteenPrice="2967"',
+        'data-example-twelvePrice="2815"',
+        '"@type": "Article"',
+        '"@type": "BreadcrumbList"',
+      ]) {
+        if (!html.includes(required)) failures.push(`${path}: missing G8 evidence ${required}`);
+      }
+    }
     for (const header of ["content-security-policy", "x-content-type-options", "referrer-policy", "permissions-policy"]) {
       if (!response.headers.get(header)) failures.push(`${path}: missing ${header}`);
     }
@@ -68,6 +81,7 @@ for (const [path, canonical] of pages) {
 for (const path of [
   "/guides/etsy-share-save-vs-offsite-ads",
   "/guides/etsy-seller-fees-sales-tax",
+  "/guides/etsy-offsite-ads-pricing",
   "/guides/etsy-offsite-ads-fees",
   "/guides/etsy-fees-on-shipping",
   "/guides/how-to-price-etsy-products",

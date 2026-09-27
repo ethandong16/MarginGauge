@@ -48,4 +48,11 @@ export const PUBLISHED_GUIDES = [
     summary: "Separate buyer sales tax from seller revenue, transaction fees, and payment processing in a supported US order model.",
     url: "/guides/etsy-seller-fees-sales-tax/",
   },
+  {
+    id: "etsy-offsite-ads-pricing",
+    eyebrow: "Pricing and attribution",
+    title: "How Offsite Ads Change Your Etsy Target Price",
+    summary: "Calculate the minimum listing price needed to preserve a profit target after a 12% or 15% attributed Offsite Ads fee.",
+    url: "/guides/etsy-offsite-ads-pricing/",
+  },
 ] as const;

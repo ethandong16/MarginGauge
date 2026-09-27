@@ -13,6 +13,7 @@ This tracker implements the first four-week editorial release without creating u
 | Etsy Offsite Ads Fees: 12%, 15%, and the $100 Cap | 2026-09-16 | Published and live |
 | Etsy Share & Save vs Offsite Ads: Fee and Profit Comparison | 2026-09-17 | Published and live 2026-09-21 |
 | Does Etsy Charge Seller Fees on Sales Tax? | 2026-09-22 | Published and live 2026-09-25 |
+| How Offsite Ads Change Your Etsy Target Price | 2026-09-27 | Published 2026-09-27; deployment pending |
 
 ## Per-release gate
 
@@ -42,6 +43,14 @@ This tracker implements the first four-week editorial release without creating u
 - The existing engine checks a $36 seller-revenue order with $2.40 buyer sales tax and $16.00 operating costs: taxed contribution is $16.06, compared with $16.13 without sales tax. The $0.07 difference is payment processing only.
 - Added Article and BreadcrumbList JSON-LD, self-canonical metadata, editorial byline, contextual links from all existing editorial entry points, sitemap entry, trailing-slash redirect, static route verification, launch-readiness coverage, and a G7 regression test.
 - 78 tests, type checking, production build, and 14-route static verification passed. The first production check ran before Pages finished deploying and saw a temporary 404; after a 30-second wait, production verification passed all 14 pages, canonical metadata, trailing-slash redirects, 404 behavior, and security headers. The local launch-readiness script could not confirm the analytics beacon because `CLOUDFLARE_WEB_ANALYTICS_TOKEN` is not exposed in this shell; no token was invented or committed.
+
+## G8 release — 2026-09-27
+
+- Added `/guides/etsy-offsite-ads-pricing/` for the single intent “How Offsite Ads change an Etsy target price” under the supported US Etsy.com / US bank / USD scope.
+- Official Fees & Payments Policy, Advertising & Marketing Policy, and Offsite Ads Help Center guidance were rechecked on publication day. Evidence is in `G8_RELEASE.md`.
+- The existing Target Price engine checks a $10.00 contribution target: minimum listing prices are $23.09 with no attribution, $29.67 at 15%, and $28.15 at 12%. The corresponding Offsite Ads fees are $5.95 and $4.58.
+- Added Article and BreadcrumbList JSON-LD, self-canonical metadata, editorial byline, contextual links from all existing editorial entry points, sitemap entry, trailing-slash redirect, static and production verification, launch-readiness coverage, and a G8 regression test.
+- 79 tests, type checking, production build, 15-route static verification, and launch-readiness with the configured Cloudflare Web Analytics token passed. The token was supplied as a process environment variable only and was not written to the repository.
 
 ## G4 release — 2026-09-11
 

@@ -3,6 +3,7 @@ import { join } from "node:path";
 
 const dist = join(process.cwd(), "dist");
 const routes = new Map([
+  ["/guides/etsy-offsite-ads-pricing/", ["guides/etsy-offsite-ads-pricing/index.html", "https://margin-gauge.com/guides/etsy-offsite-ads-pricing/"]],
   ["/guides/etsy-seller-fees-sales-tax/", ["guides/etsy-seller-fees-sales-tax/index.html", "https://margin-gauge.com/guides/etsy-seller-fees-sales-tax/"]],
   ["/guides/etsy-share-save-vs-offsite-ads/", ["guides/etsy-share-save-vs-offsite-ads/index.html", "https://margin-gauge.com/guides/etsy-share-save-vs-offsite-ads/"]],
   ["/guides/etsy-offsite-ads-fees/", ["guides/etsy-offsite-ads-fees/index.html", "https://margin-gauge.com/guides/etsy-offsite-ads-fees/"]],
@@ -97,6 +98,21 @@ for (const file of [
   if (!read(file).includes(salesTaxHref)) failures.push(`${file}: missing G7 contextual link`);
 }
 
+const offsiteAdsPricingHref = 'href="/guides/etsy-offsite-ads-pricing/"';
+for (const file of [
+  "index.html",
+  "etsy-profit-calculator/index.html",
+  "guides/etsy-fees-for-us-sellers/index.html",
+  "guides/how-to-calculate-etsy-profit/index.html",
+  "guides/how-to-price-etsy-products/index.html",
+  "guides/etsy-fees-on-shipping/index.html",
+  "guides/etsy-offsite-ads-fees/index.html",
+  "guides/etsy-share-save-vs-offsite-ads/index.html",
+  "guides/etsy-seller-fees-sales-tax/index.html",
+]) {
+  if (!read(file).includes(offsiteAdsPricingHref)) failures.push(`${file}: missing G8 contextual link`);
+}
+
 for (const file of [
   "guides/etsy-share-save-vs-offsite-ads/index.html",
   "guides/etsy-offsite-ads-fees/index.html",
@@ -105,6 +121,7 @@ for (const file of [
   "guides/etsy-fees-for-us-sellers/index.html",
   "guides/how-to-calculate-etsy-profit/index.html",
   "guides/etsy-seller-fees-sales-tax/index.html",
+  "guides/etsy-offsite-ads-pricing/index.html",
 ]) {
   const html = read(file);
   if (!html.includes('property="og:type" content="article"')) failures.push(`${file}: missing article Open Graph type`);
@@ -123,6 +140,7 @@ for (const path of [
   "/guides/etsy-fees-for-us-sellers/",
   "/guides/how-to-calculate-etsy-profit/",
   "/guides/etsy-seller-fees-sales-tax/",
+  "/guides/etsy-offsite-ads-pricing/",
 ]) {
   if (!sitemap.includes(`https://margin-gauge.com${path}`)) failures.push(`sitemap: missing ${path}`);
 }
