@@ -16,9 +16,11 @@ The operator's explicit instruction on 2026-10-20 to proceed with the applicatio
 ## Status
 
 - Account: created.
-- Customer/payment information: incomplete; awaiting the operator's required details. Do not store payment-profile names, addresses, postal codes, phone numbers, identity documents, or banking details in this repository.
-- Website changes: prepared locally; deployment and Google's ownership verification pending.
-- Review: not yet requested.
+- Customer/payment information: submitted as an Individual profile with the user-provided legal details. The onboarding screen confirms "We've got your info". Do not store payment-profile names, addresses, postal codes, phone numbers, identity documents, or banking details in this repository.
+- Website changes: deployed to production; Google confirmed "Your site is verified" using the HTML meta tag.
+- Review: requested on 2026-10-20. After a full reload, the site shows "Getting ready" and "Review requested". Google states that checks usually take a few days, sometimes 2-4 weeks. This is not approval.
+- Payments hold: after customer information was submitted, Google displayed a temporary account suspension and a payments hold requiring identity verification. The verification dialog requests a government-issued ID; an address document is optional. The user must complete that remaining step with their real document. The actual cause behind Google's identity-check trigger is not known.
+- ads.txt: the correct publisher line is live and returns HTTP 200. The AdSense dashboard still reports "Not found" at this check; crawler processing is pending.
 - Advertising: not enabled.
 
 ## Verification evidence
@@ -40,6 +42,15 @@ google.com, pub-8121002735026874, DIRECT, f08c47fec0942fa0
 ```
 
 Neither declaration executes an ad script or sets a visitor cookie. The current privacy policy describes this verification-only stage. Contact and legal pages use the same operator name.
+
+## Validation and follow-up
+
+- The implementation passed 79 tests, TypeScript checking, the production build, static checks for 15 routes and launch-readiness checks. The ownership meta tag was also checked in all 16 generated HTML files, including the 404 page, with no Google advertising script present.
+- After deployment, `npm run verify:production` passed for 15 production pages, metadata, redirects, 404 behavior and security headers. Live checks confirmed the meta tag, exact ads.txt line and updated Privacy/Contact content.
+- Both customer-info submission and the website review request were confirmed in the UI after reload. The remaining identity-verification dialog is open for the operator. No identity documents were accessed or uploaded.
+- Complete the requested Payments identity verification, then check the payment hold and website review status. Keep normal original-content work going while Google reviews the site.
+- Official AdSense Help article 13863682, with country set to China, asks for the postal code, complex name, building, floor and room number. The address must receive international ordinary mail. Local delivery arrangements must be checked with the building reception or serving post office.
+- Official Help article 157667 says PIN mail is triggered at the verification threshold, may follow required identity verification, has no tracking number, and usually takes about three weeks. Address verification is due within four months of PIN generation. Some accounts may not need mailed address verification after online identity verification; follow the account's Verification check screen.
 
 ## Ad-serving release gate
 
