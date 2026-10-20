@@ -33,7 +33,7 @@ An active Cloudflare Redirect Rule sends `www.margin-gauge.com/*` to `https://ma
 
 ## Production release gate
 
-The production site includes the operator information supplied for launch, public Contact, Privacy, Terms, and Disclaimer pages, and a 1200 x 630 Open Graph image. It intentionally does not include AdSense, GA4, advertising cookies, or a publisher ID.
+The production site includes the operator information supplied for launch, public Contact, Privacy, Terms, and Disclaimer pages, and a 1200 x 630 Open Graph image. The AdSense application uses the issued publisher account through a production HTML verification meta tag and an ads.txt authorization entry. It does not load advertising scripts, serve ads, use GA4, or set advertising cookies. See ADSENSE_APPLICATION.md for the application status and the separate ad-serving release gate.
 
 Run the local and public release gates with:
 

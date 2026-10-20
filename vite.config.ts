@@ -27,6 +27,23 @@ export default defineConfig(({ mode }) => {
     plugins: [
       react(),
       {
+        name: "adsense-ownership-verification",
+        transformIndexHtml() {
+          if (mode !== "production") return [];
+
+          return [
+            {
+              tag: "meta",
+              attrs: {
+                name: "google-adsense-account",
+                content: "ca-pub-8121002735026874",
+              },
+              injectTo: "head",
+            },
+          ];
+        },
+      },
+      {
         name: "cloudflare-web-analytics",
         transformIndexHtml() {
           if (mode !== "production" || !analyticsToken) return [];

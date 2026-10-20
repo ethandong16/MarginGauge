@@ -229,4 +229,4 @@ npm run preview
 - `npm run build`：执行 TypeScript 检查并生成 `dist` 生产构建。
 - `npm run preview`：本地预览生产构建；访问终端显示的 URL。
 
-生产站点已部署至 `https://margin-gauge.com/`，包括规范路径、静态法律页面、运营主体信息、`ads.txt`、缓存和安全响应头。当前版本不接入 AdSense、GA4、广告 Cookie 或虚假 publisher ID；未来若引入广告或非必要存储，必须先完成相应的隐私与 consent 审查。
+生产站点已部署至 `https://margin-gauge.com/`，包括规范路径、静态法律页面、运营主体信息、`ads.txt`、缓存和安全响应头。当前版本已为 AdSense 申请配置真实发布商的验证 Meta 标签和 ads.txt；尚未加载广告脚本、展示广告、接入 GA4 或设置广告 Cookie。广告启用前必须完成相应的隐私披露、适用的用户同意管理和页面体验检查。申请进度见 ADSENSE_APPLICATION.md。

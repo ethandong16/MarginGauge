@@ -1,2 +1,2 @@
-# MarginGauge does not serve programmatic advertising.
-# No AdSense or other publisher account is authorized for this domain.
+# Authorized publisher for the AdSense application. Ad serving is not enabled.
+google.com, pub-8121002735026874, DIRECT, f08c47fec0942fa0
